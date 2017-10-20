@@ -1,0 +1,131 @@
+@-moz-document url-prefix("https://exhentai.org/s/"), url-prefix("https://e-hentai.org/s/"), url-prefix("https://madpanda.cf/s/") {
+h1, #i2 > div:not(.sn), #i4, #i6, #i7, .ip, .sn > a > img, .sb > a > img {
+    display: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+a {
+    outline: none;
+}
+
+#i1, #i3 {
+    background-color: inherit;
+}
+
+#i3 {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 0;
+}
+
+#img {
+    max-width: 100% !important;  /* ExHentai uses */
+    max-height: 100% !important; /* inline styles */
+    height: auto !important;     /* for this, I'm */
+    width: auto !important;      /* deeply sorry. */
+}
+
+#prev, #next {
+    cursor: default;
+}
+
+div.sb {
+    z-index: 20;
+}
+
+.sb > a {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    text-decoration: none;
+    width: 100%;
+    z-index: 20;
+}
+
+.sb > a:not(:hover):after {
+    content: 'v';
+    font-family: arial, helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: 700;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sb > a:hover:after {
+    color: #000;
+    content: 'v';
+    font-family: arial, helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: 700;
+    opacity: 1;
+}
+
+div.sn > div {
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    position: fixed;
+    transition: all 200ms;
+    width: 100%;
+    z-index: 15;
+}
+
+.sn > div:after {
+    content: '\a v';
+    white-space: pre;
+}
+
+.sn > div:hover {
+    color: #000;
+    opacity: 1;
+}
+
+#prev {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 50%;
+    z-index: 5;
+}
+
+#next {
+    height: 100%;
+    left: 50%;
+    position: fixed;
+    top: 0;
+    width: 50%;
+    z-index: 5;
+}
+
+.sn > a:first-child {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: all 200ms;
+    width: 40px;
+    z-index: 10;
+}
+
+.sn > a:last-child {
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transition: all 200ms;
+    width: 40px;
+    z-index: 10;
+}
+
+.sb > a:hover, .sn > a:first-child:hover, .sn > a:last-child:hover, .sn > div:hover {
+    background-color: rgba(255, 255, 255, .4);
+}
+}
