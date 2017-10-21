@@ -103,7 +103,7 @@ div.sn > div {
     position: fixed;
     top: 0;
     width: 50%;
-    z-index: 5;
+    z-index: 7;
 }
 
 .sn > a:first-child {
@@ -128,5 +128,10 @@ div.sn > div {
 
 .sb > a:hover, .sn > a:first-child:hover, .sn > a:last-child:hover, .sn > div:hover {
     background-color: rgba(255, 255, 255, .4);
+}
+
+#prev[href$="-1"] ~ #next[href$="-2"] {
+    left: 0;
+    width: 100%;
 }
 }
