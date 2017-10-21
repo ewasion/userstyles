@@ -25,6 +25,7 @@ a {
 }
 
 #img {
+    margin-top: 0;
     max-width: 100% !important;  /* ExHentai uses */
     max-height: 100% !important; /* inline styles */
     height: auto !important;     /* for this, I'm */
