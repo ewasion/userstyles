@@ -1,5 +1,5 @@
 @-moz-document url-prefix("https://exhentai.org/s/"), url-prefix("https://e-hentai.org/s/"), url-prefix("https://madpanda.cf/s/") {
-h1, #i2 > div:not(.sn), #i4, #i6, #i7, .ip, .sn > a > img, .sb > a > img {
+h1, #i2, #i4 > div:not(.sn), #i6, #i7, .ip, .sn > a > img, .sb > a > img {
     display: none;
 }
 
