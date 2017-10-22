@@ -162,11 +162,6 @@ div.sn > div {
 #i2 > .sn > div:hover ~ a:last-child {
     opacity: 1;
 }
-
-#prev[href$="-1"] ~ #next[href$="-2"] {
-    left: 0;
-    width: 100%;
-}
 }
 
 @-moz-document url-prefix("https://exhentai.org/s/"), url-prefix("https://madpanda.cf/s/") {
@@ -202,5 +197,12 @@ div.sn > div {
 
 .sb > a:hover, .sn > a:first-child:hover, #i4 > .sn > a:last-child:hover {
     background-color: rgba(0, 0, 0, .4);
+}
+}
+
+@-moz-document regexp("^https:\\/\\/(e-hentai\\.org|exhentai\\.org|madpanda\\.cf)\\/s\\/.*\\/.*-1") {
+#next {
+    left: 0;
+    width: 100%;
 }
 }
