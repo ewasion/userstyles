@@ -217,7 +217,7 @@ div.sni h1 {
 }
 }
 
-@-moz-document regexp("^https:\\/\\/(e-hentai\\.org|exhentai\\.org|madpanda\\.cf)\\/s\\/.*\\/.*-1") {
+@-moz-document regexp("^https:\\/\\/(e-hentai\\.org|exhentai\\.org|madpanda\\.cf)\\/s\\/.*\\/.*-1$") {
 #next {
     left: 0;
     width: 100%;
