@@ -62,11 +62,8 @@ div.sb {
     opacity: 0;
 }
 
-.sb > a:hover:after {
-    opacity: 1;
-}
-
 div.sn > div {
+    color: #000;
     bottom: 0;
     left: 0;
     margin: 0;
@@ -82,8 +79,7 @@ div.sn > div {
     white-space: pre;
 }
 
-.sn > div:hover {
-    color: #000;
+.sn > div:hover, .sn > a:first-child:hover, #i4 > .sn > a:last-child:hover, #i2 > .sn > div:hover ~ a:last-child, .sb > a:hover:after {
     opacity: 1;
 }
 
@@ -133,6 +129,11 @@ div.sni h1 {
 }
 
 .sn > a:first-child {
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     left: 0;
     position: fixed;
@@ -140,9 +141,20 @@ div.sni h1 {
     transition: all 200ms;
     width: 40px;
     z-index: 10;
+    text-decoration: none;
+    opacity: 0;
+}
+
+.sn > a:first-child:before {
+    content: '˂˂';
 }
 
 #i4 > .sn > a:last-child {
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
     position: fixed;
     right: 0;
@@ -150,6 +162,12 @@ div.sni h1 {
     transition: all 200ms;
     width: 40px;
     z-index: 10;
+    text-decoration: none;
+    opacity: 0;
+}
+
+#i4 > .sn > a:last-child:before {
+    content: '˃˃';
 }
 
 #i2 > .sn > a:last-child {
@@ -167,13 +185,13 @@ div.sni h1 {
     content: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_!';
     opacity: 0;
 }
-
-#i2 > .sn > div:hover ~ a:last-child {
-    opacity: 1;
-}
 }
 
 @-moz-document url-prefix("https://exhentai.org/s/"), url-prefix("https://madpanda.cf/s/") {
+.sn > a:first-child, #i4 > .sn > a:last-child {
+    color: #000;
+}
+
 .sn + div, h1 {
     color: #34353B;
 }
@@ -196,6 +214,10 @@ div.sni h1 {
 }
 
 @-moz-document url-prefix("https://e-hentai.org/s/") {
+.sn > a:first-child, #i4 > .sn > a:last-child {
+    color: #FFF;
+}
+
 .sn + div, h1 {
     color: #E3E0D1;
 }
