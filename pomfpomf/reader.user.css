@@ -44,11 +44,26 @@ body, #image {
     opacity: 0;
 }
 
+#currentPage1 {
+    height: auto;
+    left: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    opacity: 0;
+    transition: all 200ms;
+}
+
+#currentPage1:hover {
+    opacity: 1;
+}
+
 .disabled {
     display: none;
 }
 
-#leftButton1, #rightButton1 {
+#leftButton1, #rightButton1, #currentPage1 {
     cursor: default;
 }
 }
