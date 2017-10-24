@@ -16,7 +16,7 @@
     max-height: 100%;
     height: auto;
     width: auto;
-    z-index: 5;
+    z-index: 4;
 }
 
 #image-container > a:hover > img {
@@ -37,6 +37,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#pagination-page-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 5;
 }
 
 .container section:first-child *, .back-to-gallery a {
