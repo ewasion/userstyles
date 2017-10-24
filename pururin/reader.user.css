@@ -1,0 +1,108 @@
+@-moz-document regexp("^.*:\\/\\/pururin\\.us\\/read\\/.*$") {
+body {
+    overflow: hidden;
+}
+
+#images-holder {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 0;
+    z-index: 3;
+}
+
+.row, .image-viewer, #images-holder, .images-holder {
+    background-color: inherit;
+}
+
+#images-holder > img {
+    margin-top: 0;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    z-index: 5;
+}
+
+.read-more.image-next, .read-more.image-prev {
+    cursor: default;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+}
+
+.read-more.image-next {
+    width: 100%;
+    z-index: 6;
+}
+
+.read-more.image-prev {
+    width: 50%;
+    z-index: 7;
+}
+
+.read-more + .form-group {
+    font-weight: bold;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    opacity: 0;
+    transition: all 200ms;
+    color: black;
+}
+
+.read-more + .form-group:before {
+    font: normal normal normal 14px/1 FontAwesome;
+    content: '\f0d9';
+    position: fixed;
+    bottom: 0;
+    left: 9px;
+    margin: .2em;
+    padding: .3em .7em;
+    box-sizing: border-box;
+}
+
+.read-more + .form-group:after {
+    content: ' Gallery';
+    position: fixed;
+    bottom: 0;
+    left: 18px;
+    margin: .2em;
+    padding: .3em .7em;
+    box-sizing: border-box;
+}
+
+.read-more + .form-group:hover, .clearfix + .read-more + .read-more:hover + .read-more + .form-group {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, .4);
+}
+
+.clearfix + .read-more + .read-more {
+    font-weight: bold;
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+    z-index: 12;
+    opacity: 0;
+    border: 0;
+    text-decoration: none;
+    outline: none;
+}
+
+.clearfix + .read-more + .read-more:hover {
+    opacity: 1;
+}
+}
+
+@-moz-document regexp("^.*:\\/\\/pururin\\.us\\/read\\/\\d+\\/01\\/.*$") {
+.read-more.image-prev {
+    display: none;
+}
+}
