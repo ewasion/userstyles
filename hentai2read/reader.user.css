@@ -1,0 +1,45 @@
+@-moz-document regexp("^https:\\/\\/hentai2read\\.com\\/.*\\/\\d+.*$") {
+#sidebar {
+    display: none;
+}
+
+#js-reader {
+    background: #232c32;
+    left: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+#arf-reader {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    z-index: 5;
+}
+
+.nav > li > .js-rdrPrev, .nav > li > .js-rdrNext {
+    cursor: default;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.nav > li > .js-rdrPrev {
+    width: 50%;
+    z-index: 8;
+}
+
+.nav > li > .js-rdrNext {
+    width: 100%;
+    z-index: 6;
+}
+}
