@@ -16,6 +16,27 @@
     max-height: 100%;
     height: auto;
     width: auto;
+    z-index: 5;
+}
+
+#image-container > a:hover > img {
+    min-width: 100%;
+    min-height: 100%;
+    max-width: initial;
+    max-height: initial;
+    opacity: .2;
+}
+
+#image-container > a:hover:before {
+    font-weight: bold;
+    content: 'Back to gallery';
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container section:first-child *, .back-to-gallery a {
@@ -69,8 +90,13 @@
     opacity: 1;
     border-radius: 0;
 }
-.container section:first-child .previous, .container section:first-child .next {
+
+* {
     cursor: default;
+}
+
+.first, .last, .back-to-gallery a {
+    cursor: pointer;
 }
 
 .back-to-gallery a {
