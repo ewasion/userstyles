@@ -1,0 +1,10 @@
+@-moz-document domain("myanimelist.net") {
+.profile-about-user img {
+  outline: 1px dotted white;
+  outline-offset: -1px;
+}
+.profile-about-user a img {
+  outline: 2px dashed red;
+  outline-offset: -2px;
+}
+}
