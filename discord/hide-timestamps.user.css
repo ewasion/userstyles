@@ -1,0 +1,5 @@
+@-moz-document domain("discordapp.com") {
+.comment .body .old-h2 .timestamp {
+    display: none;
+}
+}
