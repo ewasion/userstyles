@@ -64,7 +64,7 @@ body {
     font: normal normal normal 14px/1 FontAwesome;
     content: '\f0d9';
     position: fixed;
-    bottom: 0;
+    bottom: 1px;
     left: 9px;
     margin: .2em;
     padding: .3em .7em;
@@ -75,7 +75,7 @@ body {
     content: ' Gallery';
     position: fixed;
     bottom: 0;
-    left: 18px;
+    left: 19px;
     margin: .2em;
     padding: .3em .7em;
     box-sizing: border-box;
@@ -100,6 +100,10 @@ body {
 
 .clearfix + .read-more + .read-more:hover {
     opacity: 1;
+}
+
+.read-more:hover + .read-more + .form-group:before, .read-more:hover + .read-more + .form-group:after {
+    opacity: 0;
 }
 }
 
