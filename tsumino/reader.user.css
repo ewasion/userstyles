@@ -1,0 +1,86 @@
+@-moz-document regexp("https?://www.tsumino.com/Read/View/.*") {
+.tsumino-nav {
+    display: none;
+}
+
+#image-container {
+    background-color: #1a1a1a;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    text-align: center;
+    top: 0;
+    z-index: 3;
+}
+
+.img-responsive.reader-img {
+    margin-top: 0;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    z-index: 4;
+}
+
+.button-stack {
+    margin: 0;
+}
+
+#next-click {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 6;
+}
+
+#previous-click {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 50%;
+    z-index: 8;
+}
+
+#jump-click {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+#backToIndex {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 12;
+}
+
+#backToIndex + a {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 12;
+}
+
+.book-read-button {
+    transition: all 200ms;
+    cursor: default;
+    opacity: 0;
+}
+
+#backToIndex, #backToIndex + a {
+    cursor: pointer;
+}
+
+#jump-click:hover, #jump-click:hover ~ #backToIndex, #jump-click:hover ~ #backToIndex + a, #backToIndex:hover, #backToIndex + a:hover {
+    opacity: 1;
+}
+}
