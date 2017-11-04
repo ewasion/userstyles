@@ -51,8 +51,8 @@
 #jump-click {
     position: fixed;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: 160px;
+    right: 90px;
     z-index: 10;
 }
 
@@ -60,6 +60,7 @@
     position: fixed;
     bottom: 0;
     left: 0;
+    width: 160px;
     z-index: 12;
 }
 
@@ -67,6 +68,7 @@
     position: fixed;
     bottom: 0;
     right: 0;
+    width: 90px;
     z-index: 12;
 }
 
@@ -81,6 +83,6 @@
 }
 
 #jump-click:hover, #jump-click:hover ~ #backToIndex, #jump-click:hover ~ #backToIndex + a, #backToIndex:hover, #backToIndex + a:hover {
-    opacity: 1;
+    opacity: .8;
 }
 }
