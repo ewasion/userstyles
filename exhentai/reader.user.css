@@ -194,8 +194,8 @@ div.sni h1 {
     color: #34353B;
 }
 
-.sn > div, .sb > a:after {
-    color: black !important;
+div.sn > div, .sb > a:after {
+    color: black;
 }
 
 .sn > div:hover {
@@ -220,8 +220,8 @@ div.sni h1 {
     color: #E3E0D1;
 }
 
-.sn > div, .sb > a:after {
-    color: white !important;
+div.sn > div, .sb > a:after {
+    color: white;
 }
 
 .sn > div:hover {
