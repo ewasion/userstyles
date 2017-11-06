@@ -142,7 +142,8 @@ div.sni h1 {
 }
 
 .sn > a:first-child:before {
-    content: '˂˂';
+    content: '\000AB';
+    font-size: 2em;
 }
 
 #i4 > .sn > a:last-child {
@@ -163,7 +164,8 @@ div.sni h1 {
 }
 
 #i4 > .sn > a:last-child:before {
-    content: '˃˃';
+    content: '\000BB';
+    font-size: 2em;
 }
 
 #i2 > .sn > a:last-child {
@@ -188,7 +190,7 @@ div.sni h1 {
     color: #000;
 }
 
-.sn + div, h1 {
+.sn + div, h1, .sn > a:first-child:before, #i4 > .sn > a:last-child:before {
     color: #34353B;
 }
 
@@ -214,7 +216,7 @@ div.sni h1 {
     color: #FFF;
 }
 
-.sn + div, h1 {
+.sn + div, h1, .sn > a:first-child:before, #i4 > .sn > a:last-child:before {
     color: #E3E0D1;
 }
 
