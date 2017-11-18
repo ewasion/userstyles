@@ -3,7 +3,8 @@
     overflow: hidden;
 }
 
-.attachment-image a:after {
+/* Uncomment to ignore default filenames */
+.attachment-image a/*:not([href$="/image.png"]):not([href$="/unknown.png"])*/:after {
     content: attr(href);
     font-family: monospace, monospace;
     font-size: 1em;
