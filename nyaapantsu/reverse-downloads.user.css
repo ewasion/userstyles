@@ -1,0 +1,6 @@
+@-moz-document domain("nyaa.pantsu.cat"), domain("sukebei.pantsu.cat") {
+.tr-links.home-td {
+    display: flex;
+    flex-direction: row-reverse;
+}
+}
