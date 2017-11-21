@@ -1,13 +1,21 @@
 @-moz-document domain("nyaa.si") {
 body.dark a {
-    color: inherit !important;
+    color: #81a2be !important;
 }
 
 body.dark [style="color: green;"] {
-    color: #779ecb !important;
+    color: #b5bd68 !important;
+    font-weight: bold;
 }
 
 body.dark [style="color: red;"] {
-    color: #ff6961 !important;
+    color: #cc6666 !important;
+    font-weight: bold;
+}
+}
+
+@-moz-document domain("sukebei.nyaa.si") {
+body.dark a {
+    color: #cc6666 !important;
 }
 }
