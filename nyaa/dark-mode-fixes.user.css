@@ -1,0 +1,13 @@
+@-moz-document domain("nyaa.si") {
+body.dark a {
+    color: inherit !important;
+}
+
+body.dark [style="color: green;"] {
+    color: #779ecb !important;
+}
+
+body.dark [style="color: red;"] {
+    color: #ff6961 !important;
+}
+}
