@@ -3,15 +3,12 @@
     overflow: hidden;
 }
 
-.attachment-image .image {
-    display: block;
-}
-
 /* Uncomment to ignore default filenames */
 .attachment-image a/*:not([href$="/image.png"]):not([href$="/image.jpg"]):not([href$="/unknown.png"]):not([href$="/unknown.jpg"])*/:after {
     content: attr(href);
     font-family: monospace, monospace;
     font-size: 1em;
     margin-left: -77ch;
+    display: block;
 }
 }
