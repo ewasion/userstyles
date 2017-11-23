@@ -1,0 +1,105 @@
+@-moz-document regexp("http://kissmanga.com/Manga/.*/.*?id=.*") {
+body {
+    overflow: hidden;
+}
+
+#selectReadType {
+    position: fixed;
+    left: calc(50% - 55px);
+    top: 0;
+}
+
+#selectReadType, script + div ~ #divImage, #divMsg {
+    z-index: 1001;
+}
+
+#divImage p img {
+    display: none;
+}
+
+#divImage p:first-child, script + div ~ #divImage, #divImage:empty + #divMsg {
+    background: #161616 !important;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    margin: 0;
+}
+
+#divImage p:first-child::before {
+    background: #161616 !important;
+    content: 'This userstyle doesn\'t work with the \'All pages\' reading type.\APlease change it using the dropdown above.';
+    white-space: pre;
+}
+
+#imgCurrent {
+    margin-top: 0;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    z-index: 1003;
+}
+
+#btnNext {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1006;
+    opacity: 0;
+    cursor: default !important;
+}
+
+#btnPrevious {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 50%;
+    z-index: 1008;
+    opacity: 0;
+    cursor: default !important;
+}
+
+script + div #selectReadType, script + div .lbl:first-child {
+    display: none;
+}
+
+script + div > div:first-child {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1010;
+    transition: all 200ms;
+    cursor: default;
+    background-color: #111;
+    opacity: 0;
+}
+
+script + div > div:first-child > .lbl:nth-child(3), #selectChapter {
+    float: left;
+    width: auto;
+}
+
+#selectPage {
+    float: right;
+    width: auto;
+    margin-right: 10px;
+}
+
+script + div > div:first-child > .lbl:nth-child(5) {
+    position: fixed;
+    right: 60px;
+}
+
+script + div > div:first-child:hover {
+    opacity: .8;
+}
+}
