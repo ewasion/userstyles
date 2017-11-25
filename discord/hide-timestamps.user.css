@@ -5,4 +5,7 @@
 .message-group .comment .edited {
     pointer-events: none;
 }
+.guilds-wrapper:hover + div .comment .body .old-h2 .timestamp {
+    display: inline;
+}
 }
