@@ -2,4 +2,7 @@
 .comment .body .old-h2 .timestamp {
     display: none;
 }
+.message-group .comment .edited {
+    pointer-events: none;
+}
 }
