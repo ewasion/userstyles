@@ -7,9 +7,6 @@ body {
     position: fixed;
     left: calc(50% - 55px);
     top: 0;
-}
-
-#selectReadType, script + div ~ #divImage, #divMsg {
     z-index: 1001;
 }
 
@@ -28,11 +25,12 @@ body {
     right: 0;
     top: 0;
     margin: 0;
+    z-index: 1000;
 }
 
 #divImage p:first-child::before {
     background: #161616 !important;
-    content: 'This userstyle doesn\'t work with the \'All pages\' reading type.\APlease change it using the dropdown above.';
+    content: 'This userstyle doesn\'t work with the \'All pages\' reading type.\APlease select \'One page\' using the dropdown above.';
     white-space: pre;
 }
 
