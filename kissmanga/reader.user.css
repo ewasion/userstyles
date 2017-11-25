@@ -97,7 +97,50 @@ script + div > div:first-child > .lbl:nth-child(5) {
     right: 60px;
 }
 
-script + div > div:first-child:hover {
+script + div > div:first-child::after {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    content: 'v';
+    pointer-events: none;
+    font-weight: bold;
+}
+
+script + div > div:first-child:hover, #headnav:hover {
     opacity: .8;
+}
+
+#navbar {
+    display: none;
+}
+
+#headnav {
+    position: fixed;
+    bottom: 0;
+    z-index: 1015;
+    width: auto;
+    margin-bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 200ms;
+}
+
+#navsubbar {
+    background: none;
+}
+
+#navsubbar p {
+    width: auto;
+    text-indent: 0;
+}
+
+#headnav:hover + div > script + div > div:first-child {
+    opacity: .8
+}
+
+#headnav:hover + div > script + div > div:first-child::after {
+    opacity: 0;
 }
 }
