@@ -1,4 +1,4 @@
-@-moz-document regexp("^.*:\\/\\/pururin\\.us\\/read\\/.*$") {
+@-moz-document regexp("^.*:\\/\\/(www.)?pururin\\.us\\/read\\/.*$") {
 body {
     overflow: hidden;
 }
@@ -107,7 +107,7 @@ body {
 }
 }
 
-@-moz-document regexp("^.*:\\/\\/pururin\\.us\\/read\\/\\d+\\/01\\/.*$") {
+@-moz-document regexp("^.*:\\/\\/(www.)?pururin\\.us\\/read\\/\\d+\\/01\\/.*$") {
 .read-more.image-prev {
     display: none;
 }
