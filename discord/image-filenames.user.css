@@ -1,4 +1,12 @@
 @-moz-document domain("discordapp.com") {
+.message-group .comment .attachment-image a {
+    border-radius: 0;
+}
+
+.message-group .comment .attachment-image a img {
+    border-radius: 3px;
+}
+
 .theme-light .attachment-image a {
     color: #737f8d;
 }
