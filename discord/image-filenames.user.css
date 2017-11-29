@@ -1,6 +1,7 @@
 @-moz-document domain("discordapp.com") {
 .attachment-image a {
     overflow: hidden;
+    color: hsla(0,0%,100%,.7) !important;
 }
 
 /* Uncomment to ignore default filenames */
