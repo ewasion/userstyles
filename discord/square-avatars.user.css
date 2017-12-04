@@ -44,4 +44,16 @@
 {
 	border-radius: 0px;
 }
+.avatarStatus-1g8f0K
+{
+    opacity: 0;
+}
+.avatar-1BXaQj:hover .avatarStatus-1g8f0K
+{
+    opacity: 1;
+}
+.avatar-1BXaQj + div
+{
+    display: none;
+}
 }
