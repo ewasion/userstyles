@@ -1,11 +1,11 @@
 @-moz-document domain("discordapp.com") {
-.comment .body .old-h2 .timestamp {
+.comment .body .old-h2 .timestamp, .system-message-timestamp {
     display: none;
 }
 .message-group .comment .edited {
     pointer-events: none;
 }
-.guilds-wrapper:hover + div .comment .body .old-h2 .timestamp {
+.guilds-wrapper:hover + div .comment .body .old-h2 .timestamp, .guilds-wrapper:hover + div .system-message-timestamp {
     display: inline;
 }
 }
