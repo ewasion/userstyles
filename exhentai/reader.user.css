@@ -58,8 +58,16 @@ div.sb {
     opacity: 0;
 }
 
-.sb > a:hover, .sn > a:first-child:hover, #i4 > .sn > a:last-child:hover {
+.sb > a:hover {
     background: linear-gradient(to top, rgba(0, 0, 0, .4) 50%, transparent 100%);
+}
+
+.sn > a:first-child:hover {
+    background: linear-gradient(to right, rgba(0, 0, 0, .4) 80%, transparent 100%);
+}
+
+#i4 > .sn > a:last-child:hover {
+    background: linear-gradient(to left, rgba(0, 0, 0, .4) 80%, transparent 100%);
 }
 
 div.sn > div {
