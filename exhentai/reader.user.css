@@ -59,7 +59,7 @@ div.sb {
 }
 
 .sb > a:hover, .sn > a:first-child:hover, #i4 > .sn > a:last-child:hover {
-    background-color: rgba(0, 0, 0, .4);
+    background: linear-gradient(to top, rgba(0, 0, 0, .4) 50%, transparent 100%);
 }
 
 div.sn > div {
