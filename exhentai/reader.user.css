@@ -58,6 +58,10 @@ div.sb {
     opacity: 0;
 }
 
+.sb > a:hover, .sn > a:first-child:hover, #i4 > .sn > a:last-child:hover {
+    background-color: rgba(0, 0, 0, .4);
+}
+
 div.sn > div {
     color: #000;
     bottom: 0;
@@ -73,6 +77,10 @@ div.sn > div {
 .sn > div:after {
     content: '\a v';
     white-space: pre;
+}
+
+.sn > div:hover {
+    background: rgba(0, 0, 0, 0.2);
 }
 
 .sn > div:hover, .sn > a:first-child:hover, #i4 > .sn > a:last-child:hover, #i2 > .sn > div:hover ~ a:last-child, .sb > a:hover:after {
@@ -198,16 +206,8 @@ div.sn > div, .sb > a:after {
     color: black;
 }
 
-.sn > div:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
-
 #i2 > .sn > div:hover ~ a:last-child {
     background: linear-gradient(to top, rgba(255, 255, 255, .2) 50%, transparent 100%);
-}
-
-.sb > a:hover, .sn > a:first-child:hover, #i4 > .sn > a:last-child:hover {
-    background-color: rgba(255, 255, 255, .4);
 }
 }
 
@@ -224,16 +224,8 @@ div.sn > div, .sb > a:after {
     color: white;
 }
 
-.sn > div:hover {
-    background: rgba(0, 0, 0, 0.2);
-}
-
 #i2 > .sn > div:hover ~ a:last-child {
     background: linear-gradient(to top, rgba(0, 0, 0, .2) 50%, transparent 100%);
-}
-
-.sb > a:hover, .sn > a:first-child:hover, #i4 > .sn > a:last-child:hover {
-    background-color: rgba(0, 0, 0, .4);
 }
 }
 
