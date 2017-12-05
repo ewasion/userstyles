@@ -1,3 +1,14 @@
+/* ==UserStyle==
+@name           ExHentai reader
+@namespace      github.com/ewasion/userstyles
+@version        0.1.0
+@description    Removes clutter from sadpanda's reader
+@author         Eva <hax@riseup.net> (https://github.com/ewasion)
+@license        GPL-3.0
+@supportURL     https://github.com/ewasion/userstyles/issues
+@homepageURL    https://ewasion.github.io/userstyles/exhentai/
+==/UserStyle== */
+
 @-moz-document url-prefix("https://exhentai.org/s/"), url-prefix("https://e-hentai.org/s/"), url-prefix("https://madpanda.cf/s/") {
 #i4 > div:not(.sn), #i4 > .sn > :not(:last-child), #i6, #i7, .ip, .sn > a > img, .sb > a > img {
     display: none;

@@ -1,3 +1,14 @@
+/* ==UserStyle==
+@name           Discord image filenames
+@namespace      github.com/ewasion/userstyles
+@version        0.1.0
+@description    Displays filenames under pictures.
+@author         Eva <hax@riseup.net> (https://github.com/ewasion)
+@license        GPL-3.0
+@supportURL     https://github.com/ewasion/userstyles/issues
+@homepageURL    https://ewasion.github.io/userstyles/discord/
+==/UserStyle== */
+
 @-moz-document domain("discordapp.com") {
 .comment .body .old-h2 .timestamp, .system-message-timestamp {
     display: none;

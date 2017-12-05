@@ -1,3 +1,14 @@
+/* ==UserStyle==
+@name           MyAnimeList borders
+@namespace      github.com/ewasion/userstyles
+@version        0.1.0
+@description    Lets you see how people's about sections are structured.
+@author         Eva <hax@riseup.net> (https://github.com/ewasion)
+@license        GPL-3.0
+@supportURL     https://github.com/ewasion/userstyles/issues
+@homepageURL    https://ewasion.github.io/userstyles/myanimelist/
+==/UserStyle== */
+
 @-moz-document domain("myanimelist.net") {
 .profile-about-user img {
   outline: 1px dotted white;

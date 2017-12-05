@@ -1,3 +1,14 @@
+/* ==UserStyle==
+@name           Nyaa Dark Mode fixes
+@namespace      github.com/ewasion/userstyles
+@version        0.1.0
+@description    Changes color of links to fit the dark theme. Toggle "Dark Mode" at the bottom of the page.
+@author         Eva <hax@riseup.net> (https://github.com/ewasion)
+@license        GPL-3.0
+@supportURL     https://github.com/ewasion/userstyles/issues
+@homepageURL    https://ewasion.github.io/userstyles/nyaa/
+==/UserStyle== */
+
 @-moz-document domain("nyaa.si") {
 body.dark a {
     color: #81a2be !important;

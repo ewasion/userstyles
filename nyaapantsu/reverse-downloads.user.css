@@ -1,3 +1,14 @@
+/* ==UserStyle==
+@name           Nyaa Pantsu reverse downloads
+@namespace      github.com/ewasion/userstyles
+@version        0.1.0
+@description    Places .torrent downloads before magnet links
+@author         Eva <hax@riseup.net> (https://github.com/ewasion)
+@license        GPL-3.0
+@supportURL     https://github.com/ewasion/userstyles/issues
+@homepageURL    https://ewasion.github.io/userstyles/nyaapantsu/
+==/UserStyle== */
+
 @-moz-document domain("nyaa.pantsu.cat"), domain("sukebei.pantsu.cat") {
 .tr-links.home-td {
     direction: rtl;

@@ -1,3 +1,14 @@
+/* ==UserStyle==
+@name           KissManga reader
+@namespace      github.com/ewasion/userstyles
+@version        0.1.0
+@description    Removes clutter from KissManga's reader
+@author         Eva <hax@riseup.net> (https://github.com/ewasion)
+@license        GPL-3.0
+@supportURL     https://github.com/ewasion/userstyles/issues
+@homepageURL    https://ewasion.github.io/userstyles/kissmanga/
+==/UserStyle== */
+
 @-moz-document regexp("http://kissmanga.com/Manga/.*/.*?id=.*") {
 body {
     overflow: hidden;

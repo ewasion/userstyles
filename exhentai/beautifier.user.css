@@ -1,8 +1,15 @@
-@-moz-document domain("exhentai.org") {
-/*
-    From https://github.com/RafaelDeJongh/ExHentai-Beautifier
-*/
+/* ==UserStyle==
+@name           ExHentai Beautifier
+@namespace      https://www.rafaeldejongh.com
+@version        1.1
+@description    This style beautifies ExHentai
+@author         Rafaël De Jongh (https://www.rafaeldejongh.com)
+@license        CC-BY-NC-SA-4.0
+@supportURL     https://github.com/RafaelDeJongh/ExHentai-Beautifier/issues
+@homepageURL    https://github.com/RafaelDeJongh/ExHentai-Beautifier
+==/UserStyle== */
 
+@-moz-document domain("exhentai.org") {
 div.ido, div.itg {
     min-width: 0;
     width: 100%;

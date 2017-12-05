@@ -1,3 +1,14 @@
+/* ==UserStyle==
+@name           Hentai2Read reader
+@namespace      github.com/ewasion/userstyles
+@version        0.1.0
+@description    Removes clutter from Hentai2Read's reader
+@author         Eva <hax@riseup.net> (https://github.com/ewasion)
+@license        GPL-3.0
+@supportURL     https://github.com/ewasion/userstyles/issues
+@homepageURL    https://ewasion.github.io/userstyles/hentai2read/
+==/UserStyle== */
+
 @-moz-document regexp("^https:\\/\\/hentai2read\\.com\\/.*\\/\\d+.*$") {
 body {
     overflow: hidden;

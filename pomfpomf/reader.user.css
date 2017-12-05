@@ -1,3 +1,14 @@
+/* ==UserStyle==
+@name           Pomf Pomf reader
+@namespace      github.com/ewasion/userstyles
+@version        0.1.0
+@description    Removes clutter from Pomf Pomf's reader
+@author         Eva <hax@riseup.net> (https://github.com/ewasion)
+@license        GPL-3.0
+@supportURL     https://github.com/ewasion/userstyles/issues
+@homepageURL    https://ewasion.github.io/userstyles/pomfpomf/
+==/UserStyle== */
+
 @-moz-document url-prefix("https://doujin.pomfpomf.moe/page/") {
 body, #image {
     overflow: hidden;
