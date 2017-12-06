@@ -20,4 +20,19 @@
 .guilds-wrapper:hover + div .comment .body .old-h2 .timestamp, .guilds-wrapper:hover + div .system-message-timestamp {
     opacity: 1;
 }
+.chat .new-messages-bar {
+    background-color: rgb(114,137,218);
+}
+.new-messages-bar button:first-child {
+    font-family: monospace, monospace;
+    position: relative;
+}
+.new-messages-bar button:first-child::before {
+    content: 'new messages';
+    text-transform: lowercase;
+    left: 5ch;
+    width: calc(100% - 10ch);
+    background-color: rgb(114,137,218);
+    position: absolute;
+}
 }
