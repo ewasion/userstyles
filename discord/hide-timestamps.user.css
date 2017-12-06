@@ -11,12 +11,13 @@
 
 @-moz-document domain("discordapp.com") {
 .comment .body .old-h2 .timestamp, .system-message-timestamp {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
 }
 .message-group .comment .edited {
     pointer-events: none;
 }
 .guilds-wrapper:hover + div .comment .body .old-h2 .timestamp, .guilds-wrapper:hover + div .system-message-timestamp {
-    display: inline;
+    opacity: 1;
 }
 }
