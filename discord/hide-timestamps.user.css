@@ -10,14 +10,14 @@
 ==/UserStyle== */
 
 @-moz-document domain("discordapp.com") {
-.comment .body .old-h2 .timestamp, .system-message-timestamp {
+.old-h2 .timestamp, .system-message-timestamp {
     opacity: 0;
     pointer-events: none;
 }
 .message-group .comment .edited {
     pointer-events: none;
 }
-.guilds-wrapper:hover + div .comment .body .old-h2 .timestamp, .guilds-wrapper:hover + div .system-message-timestamp {
+.guilds-wrapper:hover + div .old-h2 .timestamp, .guilds-wrapper:hover + div .system-message-timestamp {
     opacity: 1;
 }
 .chat .new-messages-bar {
