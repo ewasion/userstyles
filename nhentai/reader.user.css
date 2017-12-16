@@ -108,12 +108,17 @@
     justify-content: center;
     opacity: 0;
 }
+
 .container section:first-child .first {
     left: 0;
 }
 
 .container section:first-child .last {
     right: 0;
+}
+
+.first i, .last i {
+    pointer-events: none;
 }
 
 .container section:first-child .last:hover, .container section:first-child .first:hover, .back-to-gallery a:hover {
