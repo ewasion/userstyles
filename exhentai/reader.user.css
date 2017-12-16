@@ -32,22 +32,21 @@ a {
     left: -100%;
 }
 
-#i7 a:hover::before {
+#i7 a:hover:before {
     opacity: 1;
 }
 
-#i7 a::before {
+#i7 a:before {
     content: 'Download';
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     margin: auto;
-    color: #34353B;
     font-weight: bold;
     opacity: 0;
     transition: all 200ms;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, .8) 80%, transparent 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .4) 80%, transparent 100%);
 }
 
 div.sni {
@@ -234,19 +233,15 @@ div.sni h1 {
     content: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_!';
     opacity: 0;
 }
+
+div.sn > div, .sb > a:after, #i7 a:before {
+    color: #E3E0D1;
+}
 }
 
 @-moz-document url-prefix("https://exhentai.org/s/"), url-prefix("https://madpanda.cf/s/") {
-.sn > a:first-child, #i4 > .sn > a:last-child {
-    color: #000;
-}
-
 .sn + div, h1, .sn > a:first-child:before, #i4 > .sn > a:last-child:before {
     color: #34353B;
-}
-
-div.sn > div, .sb > a:after {
-    color: black;
 }
 
 #i2 > .sn > div:hover ~ a:last-child {
@@ -255,16 +250,8 @@ div.sn > div, .sb > a:after {
 }
 
 @-moz-document url-prefix("https://e-hentai.org/s/") {
-.sn > a:first-child, #i4 > .sn > a:last-child {
-    color: #FFF;
-}
-
 .sn + div, h1, .sn > a:first-child:before, #i4 > .sn > a:last-child:before {
     color: #E3E0D1;
-}
-
-div.sn > div, .sb > a:after {
-    color: white;
 }
 
 #i2 > .sn > div:hover ~ a:last-child {
