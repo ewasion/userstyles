@@ -62,7 +62,11 @@
     z-index: 5;
 }
 
-.container section:first-child *, .back-to-gallery a {
+.container section:first-child .page-number {
+    display: none;
+}
+
+.container section:first-child a, .back-to-gallery a {
     padding: 0 !important;
     margin: 0 !important;
     color: black !important;
@@ -70,13 +74,17 @@
 }
 
 .container section:first-child .next {
+    opacity: 0;
+    z-index: 6;
+}
+
+.container section:first-child .next::before {
+    content: '';
     height: 100%;
     left: 0;
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 6;
-    opacity: 0;
 }
 
 .container section:first-child .previous {
