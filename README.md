@@ -8,6 +8,7 @@ Read [INSTALL.md](https://github.com/ewasion/userstyles/blob/master/INSTALL.md)
 
 [Discord](https://ewasion.github.io/userstyles/discord/)  
 [ExHentai](https://ewasion.github.io/userstyles/exhentai/)  
+[Hentai2Manga](https://ewasion.github.io/userstyles/hentai2manga/)  
 [Hentai2Read](https://ewasion.github.io/userstyles/hentai2read/)  
 [KissManga](https://ewasion.github.io/userstyles/kissmanga/)  
 [MyAnimeList](https://ewasion.github.io/userstyles/myanimelist/)  

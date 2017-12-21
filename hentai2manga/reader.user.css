@@ -1,0 +1,107 @@
+/* ==UserStyle==
+@name           Hentai2Manga reader
+@namespace      github.com/ewasion/userstyles
+@version        0.1.0
+@description    Removes clutter from Hentai2Manga's reader
+@author         Eva <hax@riseup.net> (https://github.com/ewasion)
+@license        GPL-3.0
+@supportURL     https://github.com/ewasion/userstyles/issues
+@homepageURL    https://ewasion.github.io/userstyles/hentai2manga/
+==/UserStyle== */
+
+@-moz-document regexp("https?://hentai2manga.com/manga/.*/.*") {
+.navbar {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    margin-bottom: 0;
+    opacity: 0;
+}
+
+a {
+    outline: none !important;
+}
+
+.navbar:hover {
+    opacity: 1;
+}
+
+#chapter-list .dropdown-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    max-height: none;
+    border: none;
+}
+
+#ppp a, .previous a {
+    cursor: default;
+}
+
+#ppp a {
+    background-color: #222222;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    text-align: center;
+    top: 0;
+    z-index: 3;
+}
+
+#ppp a img {
+    margin-top: 0;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    z-index: 4;
+    padding: 0;
+}
+
+.previous a {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 50%;
+    z-index: 8;
+    opacity: 0;
+}
+
+.nav > li {
+    float: none;
+}
+
+ul.nav:last-child {
+    z-index: 10;
+    display: inline-flex;
+    text-align: center;
+}
+
+ul.nav:nth-child(2) > li:nth-child(1) > a {
+    position: fixed;
+    right: 0;
+    left: 0;
+}
+
+.caret {
+    border-bottom: 4px dashed;
+    border-top: none;
+}
+
+ul.nav:first-child, .navbar-header, #all, li.dropdown:nth-child(2) {
+    display: none !important;
+}
+
+#ppp, .page-nav {
+    display: block !important;
+}
+}
