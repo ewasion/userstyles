@@ -1,0 +1,161 @@
+/* ==UserStyle==
+@name           FoOlSlide reader
+@namespace      github.com/ewasion/userstyles
+@version        0.1.0
+@description    Removes clutter from FoOlSlide's reader
+@author         Eva <hax@riseup.net> (https://github.com/ewasion)
+@license        GPL-3.0
+@supportURL     https://github.com/ewasion/userstyles/issues
+@homepageURL    https://ewasion.github.io/userstyles/foolslide/
+==/UserStyle== */
+
+@-moz-document regexp("https?://.*\\/read\\/.*\\/[A-Za-z]{2}\\/\\d+\\/\\d+.*/?") {
+body {
+    overflow: auto !important;
+}
+
+#page:not([style$="px;"]) ~ #bottombar > #disqus_thread {
+    display: none;
+}
+
+a {
+    cursor: default;
+}
+
+.topbar {
+    background: none;
+}
+
+.topbar div .topbar_right {
+    background: red !important
+}
+
+.topbar .current_page + div > a {
+    width: 50% !important;
+    z-index: 3009 !important;
+}
+
+.topbar .current_page + div ~ div {
+    display: none;
+}
+
+.topbar .number:not(.dnone):not(.current_page) > a {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3008;
+}
+
+.topbar .number > a {
+    opacity: 0;
+}
+
+#page:not([style$="px;"]) .inner > a {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3006;
+    background-color: #34353B;
+}
+#page:not([style$="px;"]) .inner > a > img {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    z-index: 3007;
+}
+
+#page[style$="px;"]:before {
+    content: 'This is a single page gallery, most features won\'t work.';
+    color: white;
+    margin-left: 10px;
+}
+
+ul.dropdown {
+    position: fixed;
+    bottom: 37px;
+    top: auto;
+    margin: 0;
+}
+
+.topbar_left {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    z-index: 3011;
+    opacity: 0;
+    transition: opacity 200ms;
+    background: #333;
+}
+
+.topbar_left:hover {
+    opacity: .8;
+}
+
+.topbar_left > div.tbtitle:first-of-type {
+    display: block;
+}
+
+#bottombar .pagenumber {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    text-align: center;
+    z-index: 3011;
+    width: auto;
+    pointer-events: none;
+    color: #ddd;
+    opacity: 0;
+    transition: opacity 200ms;
+}
+
+#header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3010;
+    transition: opacity 200ms;
+    opacity: 0;
+    margin: 0;
+}
+
+#header a, .topbar_left a {
+    cursor: pointer;
+}
+
+#header:hover {
+    opacity: .8;
+}
+
+#header > a {
+    display: none;
+}
+
+#header:hover + #content .topbar_left, #header:hover + #content .pagenumber {
+    opacity: .8;
+    background: none;
+}
+
+.navbar {
+    z-index: 10;
+}
+
+a {
+    outline: none;
+}
+}
