@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           FoOlSlide reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.4
+@version        0.1.5
 @description    Removes clutter from FoOlSlide's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -80,6 +80,11 @@ ul.dropdown {
     bottom: 37px;
     top: auto;
     margin: 0;
+    z-index: 3010;
+}
+
+.dropdown_parent {
+    z-index: 3010;
 }
 
 .topbar_left {
@@ -89,7 +94,7 @@ ul.dropdown {
     padding-bottom: 5px;
     padding-top: 5px;
     padding-right: 5px;
-    z-index: 3011;
+    z-index: 3012;
     opacity: 0;
     transition: opacity 200ms;
     background: #333;
@@ -102,7 +107,7 @@ ul.dropdown {
     right: 0;
     bottom: 10px;
     text-align: center;
-    z-index: 3011;
+    z-index: 3012;
     width: auto;
     pointer-events: none;
     color: #ddd;
@@ -116,7 +121,7 @@ ul.dropdown {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 3010;
+    z-index: 3011;
     transition: opacity 200ms;
     opacity: 0;
     margin: 0;
@@ -126,11 +131,11 @@ ul.dropdown {
     display: block !important;
 }
 
-#header a, .topbar_left a {
+#header a, .topbar_left a, .dropdown a {
     cursor: pointer;
 }
 
-#header:hover, .topbar_left:hover {
+#header:hover, .topbar_left:hover, .topbar_right .dropdown > li:first-child > a:hover:after, .topbar_right .dropdown > li:last-child > a:hover:after {
     opacity: .8;
 }
 
@@ -141,5 +146,51 @@ ul.dropdown {
 
 .navbar {
     z-index: 10;
+}
+
+.topbar_right .dropdown {
+    display: block;
+}
+
+.topbar_right .text, .topbar_right .dropdown {
+    margin-right: -9999px;
+}
+
+.topbar_right .dropdown > li:first-child > a:after {
+    font-weight: bold;
+    content: '\000AB';
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    transition: opacity 200ms;
+    width: 40px;
+    text-decoration: none;
+    opacity: 0;
+    color: #ddd;
+    background: #333;
+}
+
+.topbar_right .dropdown > li:last-child > a:after {
+    font-weight: bold;
+    content: '\000BB';
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    right: 0;
+    position: fixed;
+    top: 0;
+    transition: opacity 200ms;
+    width: 40px;
+    text-decoration: none;
+    opacity: 0;
+    color: #ddd;
+    background: #333;
 }
 }
