@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           FoOlSlide reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.0
+@version        0.1.1
 @description    Removes clutter from FoOlSlide's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -24,10 +24,6 @@ a {
 
 .topbar {
     background: none;
-}
-
-.topbar div .topbar_right {
-    background: red !important
 }
 
 .topbar .current_page + div > a {
