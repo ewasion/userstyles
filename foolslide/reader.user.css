@@ -128,6 +128,7 @@ ul.dropdown {
     transition: opacity 200ms;
     opacity: 0;
     margin: 0;
+    background: #333;
 }
 
 #header a, .topbar_left a {
