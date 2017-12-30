@@ -14,7 +14,7 @@ body {
     overflow: auto !important;
 }
 
-#page:not([style$="px;"]) ~ #bottombar > #disqus_thread {
+#disqus_thread {
     display: none;
 }
 
