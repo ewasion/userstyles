@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           FoOlSlide reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.5
+@version        0.1.6
 @description    Removes clutter from FoOlSlide's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -11,7 +11,8 @@
 
 @-moz-document regexp("https?://.*\\/read\\/.*\\/[A-Za-z]{2}(-[A-Za-z]{2})?\\/\\d+\\/\\d+.*/?") {
 body {
-    overflow: auto !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
 }
 
 #disqus_thread, .topbar .current_page + div ~ div, #navig ~ div, #header > a, #header img:not([src*=feed-icon]), .dh {
@@ -114,6 +115,7 @@ ul.dropdown {
     opacity: 0;
     transition: opacity 200ms;
     max-width: none;
+    margin: 0;
 }
 
 #header {
@@ -129,6 +131,7 @@ ul.dropdown {
     color: #ddd;
     background: #333;
     display: block !important;
+    padding: 0;
 }
 
 #header a, .topbar_left a, .dropdown a {
@@ -150,21 +153,20 @@ ul.dropdown {
 
 .topbar_right .dropdown {
     display: block;
+    font-family: sans-serif;
 }
 
 .topbar_right .text, .topbar_right .dropdown {
     margin-right: -9999px;
 }
 
-.topbar_right .dropdown > li:first-child > a:after {
+.topbar_right .dropdown > li:first-child > a:after, .topbar_right .dropdown > li:last-child > a:after {
     font-weight: bold;
-    content: '\000AB';
-    font-size: 2em;
+    font-size: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-    left: 0;
     position: fixed;
     top: 0;
     transition: opacity 200ms;
@@ -175,22 +177,13 @@ ul.dropdown {
     background: #333;
 }
 
+.topbar_right .dropdown > li:first-child > a:after {
+    content: '\000AB';
+    left: 0;
+}
+
 .topbar_right .dropdown > li:last-child > a:after {
-    font-weight: bold;
     content: '\000BB';
-    font-size: 2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
     right: 0;
-    position: fixed;
-    top: 0;
-    transition: opacity 200ms;
-    width: 40px;
-    text-decoration: none;
-    opacity: 0;
-    color: #ddd;
-    background: #333;
 }
 }
