@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           FoOlSlide reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.3
+@version        0.1.4
 @description    Removes clutter from FoOlSlide's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -14,12 +14,13 @@ body {
     overflow: auto !important;
 }
 
-#disqus_thread {
+#disqus_thread, .topbar .current_page + div ~ div, #navig ~ div, #header > a, #header img:not([src*=feed-icon]), .dh {
     display: none;
 }
 
 a {
     cursor: default;
+    outline: none;
 }
 
 .topbar {
@@ -29,10 +30,6 @@ a {
 .topbar .current_page + div > a {
     width: 50% !important;
     z-index: 3009 !important;
-}
-
-.topbar .current_page + div ~ div {
-    display: none;
 }
 
 .topbar .number:not(.dnone):not(.current_page) > a {
@@ -99,14 +96,6 @@ ul.dropdown {
     color: #ddd;
 }
 
-.topbar_left:hover {
-    opacity: .8;
-}
-
-.topbar_left > div.tbtitle:first-of-type {
-    display: block;
-}
-
 #bottombar .pagenumber {
     position: fixed;
     left: 0;
@@ -120,10 +109,6 @@ ul.dropdown {
     opacity: 0;
     transition: opacity 200ms;
     max-width: none;
-}
-
-#navig ~ div {
-    display: none;
 }
 
 #header {
@@ -145,12 +130,8 @@ ul.dropdown {
     cursor: pointer;
 }
 
-#header:hover {
+#header:hover, .topbar_left:hover {
     opacity: .8;
-}
-
-#header > a, #header img:not([src*=feed-icon]), .dh {
-    display: none;
 }
 
 #header:hover + #content .topbar_left, #header:hover + #content .pagenumber {
@@ -160,9 +141,5 @@ ul.dropdown {
 
 .navbar {
     z-index: 10;
-}
-
-a {
-    outline: none;
 }
 }
