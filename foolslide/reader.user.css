@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           FoOlSlide reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.6
+@version        0.1.7
 @description    Removes clutter from FoOlSlide's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -46,7 +46,7 @@ a {
     opacity: 0;
 }
 
-#page:not([style$="px;"]) .inner > a {
+#page[style]:not([style$="px;"]) .inner > a {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -56,7 +56,7 @@ a {
     background-color: #34353B;
 }
 
-#page:not([style$="px;"]) .inner > a > img {
+#page[style]:not([style$="px;"]) .inner > a > img {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -70,8 +70,8 @@ a {
     z-index: 3007;
 }
 
-#page[style$="px;"]:before {
-    content: 'This is a single page gallery, most features won\'t work.';
+#page:not([style]):before, #page[style$="px;"]:before {
+    content: 'This is a multi-page gallery, most features won\'t work.';
     color: white;
     margin-left: 10px;
 }
