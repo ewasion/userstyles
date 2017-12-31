@@ -46,7 +46,7 @@ a {
     opacity: 0;
 }
 
-#page[style]:not([style$="px;"]) .inner > a {
+#page a:not([onclick^="return changePage"]):first-child {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -56,7 +56,7 @@ a {
     background-color: #34353B;
 }
 
-#page[style]:not([style$="px;"]) .inner > a > img {
+#page a:not([onclick^="return changePage"]):first-child > img {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -70,7 +70,7 @@ a {
     z-index: 3007;
 }
 
-#page:not([style]):before, #page[style$="px;"]:before {
+#page a[onclick^="return changePage"]:first-child:before {
     content: 'This is a multi-page gallery, most features won\'t work.';
     color: white;
     margin-left: 10px;
