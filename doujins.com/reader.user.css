@@ -1,0 +1,160 @@
+/* ==UserStyle==
+@name           Doujins.com reader
+@namespace      github.com/ewasion/userstyles
+@version        0.1
+@description    Removes clutter from Doujins.com's reader
+@author         Eva <hax@riseup.net> (https://github.com/ewasion)
+@license        GPL-3.0
+@supportURL     https://github.com/ewasion/userstyles/issues
+@homepageURL    https://ewasion.github.io/userstyles/doujins.com/
+==/UserStyle== */
+
+@-moz-document domain("doujins.com") {
+body {
+    overflow: auto;
+}
+
+a {
+    cursor: default;
+    outline: none;
+}
+
+#image-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3006;
+    background-color: #34353B;
+}
+
+#image-container > img {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto !important;
+    z-index: 3007;
+}
+
+#image-counter {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 3012;
+    width: auto;
+    pointer-events: none;
+    color: #34353B;
+    transition: opacity 200ms;
+    max-width: none;
+    margin: 0;
+}
+
+#images > div > div > .controls {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3011;
+    transition: opacity 200ms;
+    opacity: 0;
+    margin: 0;
+    width: auto !important;
+    color: #34353B;
+    background: #ddd;
+    display: block !important;
+    padding: 0;
+}
+
+.col-md-9 + .text-md-right {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 3012;
+    width: auto;
+    height: 37px;
+    display: flex;
+    align-items: center;
+}
+
+.gallery-artist a {
+    color: #34353B;
+    cursor: pointer;
+}
+
+.gallery-artist a:hover {
+    font-weight: bold;
+}
+
+#login {
+    z-index: 3020;
+}
+
+#images > div > div > .controls > a:first-child {
+    position: fixed;
+    right: 46px;
+    bottom: 0;
+}
+
+#add-bookmark {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+#add-bookmark ~ .hidden {
+    display: block !important;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#images > div > div > .controls:hover, .col-md-9 + .text-md-right:hover ~ .col-xs-12 #images > div > div > .controls {
+    opacity: .8;
+}
+
+#images > div > div > .controls .image-back, #images > div > div > .controls .image-next, #image-toggle-size, #add-bookmark ~ a {
+    display: none;
+}
+
+#slidetoolbar {
+    display: block;
+    z-index: 3009;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    padding: 0;
+    opacity: 0 !important;
+}
+
+#slidetoolbar .btn-group:first-child, #slidetoolbar .btn-group:last-child {
+    z-index: 3010;
+    pointer-events: none;
+}
+
+#slidetoolbar .image-back, #slidetoolbar .image-next {
+    display: flex;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: 50%;
+    opacity: 0;
+    cursor: default;
+}
+
+#slidetoolbar .image-back {
+    left: 0;
+}
+
+#slidetoolbar .image-next {
+    right: 0;
+}
+}
