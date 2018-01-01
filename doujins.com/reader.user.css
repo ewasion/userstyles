@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Doujins.com reader
 @namespace      github.com/ewasion/userstyles
-@version        0.12
+@version        0.13
 @description    Removes clutter from Doujins.com's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -96,7 +96,7 @@ a {
     z-index: 3020;
 }
 
-.link-area > a[data-toggle="modal"][data-target="#login"]:not([data-state]) > span, .link-area > a[href^="/zip/"] > span {
+#thumbnails.hidden .link-area > a[data-toggle="modal"][data-target="#login"]:not([data-state]) > span, #thumbnails.hidden .link-area > a[href^="/zip/"] > span {
     position: fixed;
     right: 92px;
     bottom: 9px;
@@ -106,7 +106,7 @@ a {
     z-index: 3011;
 }
 
-.link-area > a[data-toggle="modal"][data-target="#login"]:not([data-state]) > span:hover, .link-area > a[href^="/zip/"] > span:hover {
+#thumbnails.hidden .link-area > a[data-toggle="modal"][data-target="#login"]:not([data-state]) > span:hover, #thumbnails.hidden .link-area > a[href^="/zip/"] > span:hover {
     background-color: #ddd;
     opacity: .8;
     height: 37px;
@@ -117,7 +117,7 @@ a {
     align-items: center;
 }
 
-.link-area > a[data-toggle="modal"][data-target="#login"]:not([data-state]) > span:hover:after, .link-area > a[href^="/zip/"] > span:hover:after {
+#thumbnails.hidden .link-area > a[data-toggle="modal"][data-target="#login"]:not([data-state]) > span:hover:after, #thumbnails.hidden .link-area > a[href^="/zip/"] > span:hover:after {
     content: '\0000a0Download';
     font-family: sans-serif;
 }
@@ -144,7 +144,12 @@ a {
     display: block !important;
 }
 
-#thumbnails .col-xs-6:not(.pull-right):first-child a:after, #thumbnails .col-xs-6:last-child:not(.pull-right) a:after {
+#thumbnails.hidden {
+    height: 10px;
+    overflow: hidden;
+}
+
+#thumbnails.hidden .col-xs-6:not(.pull-right):first-child a:after, #thumbnails.hidden .col-xs-6:last-child:not(.pull-right) a:after {
     font-weight: bold;
     font-size: 40px;
     display: flex;
@@ -162,17 +167,17 @@ a {
     z-index: 3009;
 }
 
-#thumbnails .col-xs-6:not(.pull-right):first-child a:after {
+#thumbnails.hidden .col-xs-6:not(.pull-right):first-child a:after {
     content: '\000AB';
     left: 0;
 }
 
-#thumbnails .col-xs-6:last-child:not(.pull-right) a:after {
+#thumbnails.hidden .col-xs-6:last-child:not(.pull-right) a:after {
     content: '\000BB';
     right: 0;
 }
 
-#images > div > div > .controls:hover, .col-md-9 + .text-md-right:hover ~ .col-xs-12 #images > div > div > .controls, #thumbnails .col-xs-6:not(.pull-right):first-child a:hover:after, #thumbnails .col-xs-6:last-child:not(.pull-right) a:hover:after, #images:hover + #thumbnails .link-area > a[data-toggle="modal"][data-target="#login"]:not([data-state]) > span, #images:hover + #thumbnails .link-area > a[href^="/zip/"] > span {
+#images > div > div > .controls:hover, .col-md-9 + .text-md-right:hover ~ .col-xs-12 #images > div > div > .controls, #thumbnails.hidden .col-xs-6:not(.pull-right):first-child a:hover:after, #thumbnails.hidden .col-xs-6:last-child:not(.pull-right) a:hover:after, #images:hover + #thumbnails.hidden .link-area > a[data-toggle="modal"][data-target="#login"]:not([data-state]) > span, #images:hover + #thumbnails.hidden .link-area > a[href^="/zip/"] > span {
     opacity: .8;
 }
 
