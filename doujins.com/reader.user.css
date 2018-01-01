@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Doujins.com reader
 @namespace      github.com/ewasion/userstyles
-@version        0.11
+@version        0.12
 @description    Removes clutter from Doujins.com's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -86,7 +86,6 @@ a {
 
 .gallery-artist a {
     color: #34353B;
-    cursor: pointer;
 }
 
 .gallery-artist a:hover {
@@ -95,6 +94,32 @@ a {
 
 #login {
     z-index: 3020;
+}
+
+.link-area > a[data-toggle="modal"][data-target="#login"]:not([data-state]) > span, .link-area > a[href^="/zip/"] > span {
+    position: fixed;
+    right: 92px;
+    bottom: 9px;
+    top: auto;
+    color: #333;
+    opacity: 0;
+    z-index: 3011;
+}
+
+.link-area > a[data-toggle="modal"][data-target="#login"]:not([data-state]) > span:hover, .link-area > a[href^="/zip/"] > span:hover {
+    background-color: #ddd;
+    opacity: .8;
+    height: 37px;
+    padding-left: 10px;
+    padding-right: 10px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.link-area > a[data-toggle="modal"][data-target="#login"]:not([data-state]) > span:hover:after, .link-area > a[href^="/zip/"] > span:hover:after {
+    content: '\0000a0Download';
+    font-family: sans-serif;
 }
 
 #images > div > div > .controls > a:first-child {
@@ -115,7 +140,39 @@ a {
     pointer-events: none;
 }
 
-#images > div > div > .controls:hover, .col-md-9 + .text-md-right:hover ~ .col-xs-12 #images > div > div > .controls {
+#thumbnails {
+    display: block !important;
+}
+
+#thumbnails .col-xs-6:not(.pull-right):first-child a:after, #thumbnails .col-xs-6:last-child:not(.pull-right) a:after {
+    font-weight: bold;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    transition: opacity 200ms;
+    width: 40px;
+    text-decoration: none;
+    opacity: 0;
+    color: #333;
+    background: #ddd;
+    z-index: 3009;
+}
+
+#thumbnails .col-xs-6:not(.pull-right):first-child a:after {
+    content: '\000AB';
+    left: 0;
+}
+
+#thumbnails .col-xs-6:last-child:not(.pull-right) a:after {
+    content: '\000BB';
+    right: 0;
+}
+
+#images > div > div > .controls:hover, .col-md-9 + .text-md-right:hover ~ .col-xs-12 #images > div > div > .controls, #thumbnails .col-xs-6:not(.pull-right):first-child a:hover:after, #thumbnails .col-xs-6:last-child:not(.pull-right) a:hover:after, #images:hover + #thumbnails .link-area > a[data-toggle="modal"][data-target="#login"]:not([data-state]) > span, #images:hover + #thumbnails .link-area > a[href^="/zip/"] > span {
     opacity: .8;
 }
 
