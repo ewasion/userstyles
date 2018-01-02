@@ -7,7 +7,9 @@ Read [INSTALL.md](https://github.com/ewasion/userstyles/blob/master/INSTALL.md)
 ### Browse styles
 
 [Discord](https://ewasion.github.io/userstyles/discord/)  
+[Doujins.com](https://ewasion.github.io/userstyles/doujins.com/)  
 [ExHentai](https://ewasion.github.io/userstyles/exhentai/)  
+[FoOlSlide](https://ewasion.github.io/userstyles/foolslide/)  
 [Hentai2Manga](https://ewasion.github.io/userstyles/hentai2manga/)  
 [Hentai2Read](https://ewasion.github.io/userstyles/hentai2read/)  
 [KissManga](https://ewasion.github.io/userstyles/kissmanga/)  
