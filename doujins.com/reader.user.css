@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Doujins.com reader
 @namespace      github.com/ewasion/userstyles
-@version        0.16
+@version        0.17
 @description    Removes clutter from Doujins.com's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -103,7 +103,7 @@ a {
     top: auto;
     color: #333;
     opacity: 0;
-    z-index: 3011;
+    z-index: 3012;
 }
 
 #thumbnails.hidden .link-area > a[data-toggle="modal"][data-target="#login"]:not([data-state]) > span:hover, #thumbnails.hidden .link-area > a[href^="/zip/"] > span:hover {
@@ -177,7 +177,7 @@ a {
     right: 0;
 }
 
-#images > div > div > .controls:hover, .col-md-9 + .text-md-right:hover ~ .col-xs-12 #images > div > div > .controls, #thumbnails.hidden div.col-xs-6:not(.pull-right):first-child a:hover:after, #thumbnails.hidden div.col-xs-6:last-child:not(.pull-right) a:hover:after, #images:hover + #thumbnails.hidden .link-area > a[data-toggle="modal"][data-target="#login"]:not([data-state]) > span, #images:hover + #thumbnails.hidden .link-area > a[href^="/zip/"] > span {
+#images > div > div > .controls:hover, .col-md-9 + .text-md-right:hover ~ .col-xs-12 #images > div > div > .controls, #thumbnails.hidden div.col-xs-6:not(.pull-right):first-child a:hover:after, #thumbnails.hidden div.col-xs-6:last-child:not(.pull-right) a:hover:after, #images:hover + #thumbnails.hidden .link-area > a[data-toggle="modal"][data-target="#login"]:not([data-state]) > span, #images:hover + #thumbnails.hidden .link-area > a[href^="/zip/"] > span, #gallery:hover ~ #comments .comments-box:before {
     opacity: .8;
 }
 
@@ -261,5 +261,46 @@ a {
     top: 0;
     width: auto;
     height: auto;
+}
+
+.comments {
+    height: 0;
+    overflow: hidden;
+}
+
+.comments-box:hover:before {
+    background: #ddd;
+}
+
+.comments-box:before {
+    content: '\e111';
+    font-family: 'Glyphicons Halflings';
+    font-size: 20px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    bottom: 0;
+    right: 128px;
+    z-index: 3011;
+    color: #34353B;
+    height: 37px;
+    opacity: 1;
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+.comments-box:hover > .comments {
+    position: fixed;
+    top: 0;
+    bottom: 37px;
+    right: 0;
+    left: 0;
+    z-index: 3009;
+    height: calc(100% - 37px);
+    overflow: auto;
+}
+
+.comments hr {
+    opacity: 0;
 }
 }
