@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           FoOlSlide reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.72
+@version        0.1.73
 @description    Removes clutter from FoOlSlide's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -134,7 +134,7 @@ ul.dropdown {
     opacity: .8;
 }
 
-#header:hover + #content .topbar_left, #header:hover + #content .pagenumber {
+#header:hover ~ #content .topbar_left, #header:hover + #content .pagenumber {
     opacity: .8;
     background: none;
 }
