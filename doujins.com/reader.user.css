@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Doujins.com reader
 @namespace      github.com/ewasion/userstyles
-@version        0.13
+@version        0.14
 @description    Removes clutter from Doujins.com's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -149,7 +149,7 @@ a {
     overflow: hidden;
 }
 
-#thumbnails.hidden .col-xs-6:not(.pull-right):first-child a:after, #thumbnails.hidden .col-xs-6:last-child:not(.pull-right) a:after {
+#thumbnails.hidden div.col-xs-6:not(.pull-right):first-child a:after, #thumbnails.hidden div.col-xs-6:last-child:not(.pull-right) a:after {
     font-weight: bold;
     font-size: 40px;
     display: flex;
@@ -167,17 +167,17 @@ a {
     z-index: 3009;
 }
 
-#thumbnails.hidden .col-xs-6:not(.pull-right):first-child a:after {
+#thumbnails.hidden div.col-xs-6:not(.pull-right):first-child a:after {
     content: '\000AB';
     left: 0;
 }
 
-#thumbnails.hidden .col-xs-6:last-child:not(.pull-right) a:after {
+#thumbnails.hidden div.col-xs-6:last-child:not(.pull-right) a:after {
     content: '\000BB';
     right: 0;
 }
 
-#images > div > div > .controls:hover, .col-md-9 + .text-md-right:hover ~ .col-xs-12 #images > div > div > .controls, #thumbnails.hidden .col-xs-6:not(.pull-right):first-child a:hover:after, #thumbnails.hidden .col-xs-6:last-child:not(.pull-right) a:hover:after, #images:hover + #thumbnails.hidden .link-area > a[data-toggle="modal"][data-target="#login"]:not([data-state]) > span, #images:hover + #thumbnails.hidden .link-area > a[href^="/zip/"] > span {
+#images > div > div > .controls:hover, .col-md-9 + .text-md-right:hover ~ .col-xs-12 #images > div > div > .controls, #thumbnails.hidden div.col-xs-6:not(.pull-right):first-child a:hover:after, #thumbnails.hidden div.col-xs-6:last-child:not(.pull-right) a:hover:after, #images:hover + #thumbnails.hidden .link-area > a[data-toggle="modal"][data-target="#login"]:not([data-state]) > span, #images:hover + #thumbnails.hidden .link-area > a[href^="/zip/"] > span {
     opacity: .8;
 }
 
@@ -202,7 +202,6 @@ a {
 }
 
 #slidetoolbar .image-back, #slidetoolbar .image-next {
-    display: flex;
     height: 100%;
     position: fixed;
     top: 0;
@@ -217,5 +216,50 @@ a {
 
 #slidetoolbar .image-next {
     right: 0;
+}
+
+#thumbnails.hidden > .thumbnails > ul > li {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 3010;
+    color: white;
+}
+
+#thumbnails.hidden > .thumbnails > ul > li > div {
+    background: #34353B;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#thumbnails.hidden > .thumbnails > ul > li > .gallery-info {
+    margin: 0;
+}
+
+#thumbnails.hidden .thumbnail-doujin > a[href="/subscribe"] {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    z-index: 3009;
+}
+
+#thumbnails.hidden .thumbnail-doujin > a[href="/subscribe"] > img {
+    position: fixed;
+    top: 0;
+    width: auto;
+    height: auto;
 }
 }
