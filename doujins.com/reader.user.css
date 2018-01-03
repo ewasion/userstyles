@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Doujins.com reader
 @namespace      github.com/ewasion/userstyles
-@version        0.15
+@version        0.16
 @description    Removes clutter from Doujins.com's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -75,7 +75,7 @@ a {
 
 .col-md-9 + .text-md-right {
     position: fixed;
-    left: 0;
+    left: 40px;
     bottom: 0;
     z-index: 3012;
     width: auto;
