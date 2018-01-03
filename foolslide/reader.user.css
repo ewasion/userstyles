@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           FoOlSlide reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.71
+@version        0.1.72
 @description    Removes clutter from FoOlSlide's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -54,10 +54,11 @@ a {
     bottom: 0;
     left: 0;
     right: 0;
+    padding: 0;
     margin: auto;
-    max-width: 100%;
+    max-width: 100% !important;
     max-height: 100%;
-    height: auto;
+    height: auto !important;
     width: auto;
     z-index: 3007;
 }
@@ -65,7 +66,6 @@ a {
 #page a[onclick^="return changePage"]:first-child:before {
     content: 'This is a multi-page gallery, most features won\'t work.';
     color: white;
-    margin-left: 10px;
 }
 
 ul.dropdown {
