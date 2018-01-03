@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           HentaiFox reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.0
+@version        0.1.1
 @description    Removes clutter from HentaiFox's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -39,6 +39,17 @@
     right: 0;
     bottom: 0;
     background: #333;
+    z-index: 7;
+}
+
+#header > .clear {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #333;
+    z-index: 6;
 }
 
 #gimg {
