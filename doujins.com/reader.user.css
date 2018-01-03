@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Doujins.com reader
 @namespace      github.com/ewasion/userstyles
-@version        0.17
+@version        0.171
 @description    Removes clutter from Doujins.com's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -9,7 +9,7 @@
 @homepageURL    https://ewasion.github.io/userstyles/doujins.com/
 ==/UserStyle== */
 
-@-moz-document domain("doujins.com") {
+@-moz-document regexp("https://doujins.com/gallery/.*#\\S+") {
 body {
     overflow: auto;
 }
