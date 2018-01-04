@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           FoOlSlide reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.75
+@version        0.1.8
 @description    Removes clutter from FoOlSlide's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -11,8 +11,7 @@
 
 @-moz-document regexp("https?://.*\\/read\\/.*\\/[A-Za-z]{2}(-[A-Za-z]{2})?\\/\\d+\\/\\d+.*/?") {
 body {
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
+    overflow: auto !important;
 }
 
 #disqus_thread, .topbar .current_page + div ~ div, #navig ~ div, #header > a, #header img:not([src*=feed-icon]), .dh {
@@ -67,12 +66,7 @@ div#wrapper {
     z-index: 3007;
 }
 
-#page a[onclick^="return changePage"]:first-child:before {
-    content: 'This is a multi-page gallery, most features won\'t work.';
-    color: white;
-}
-
-ul.dropdown {
+.topbar_left ul.dropdown {
     position: fixed;
     bottom: 37px;
     top: auto;
@@ -152,8 +146,9 @@ ul.dropdown {
     font-family: sans-serif;
 }
 
-.topbar_right .text, .topbar_right .dropdown {
-    margin-right: -9999px;
+.topbar_right .dropdown_parent {
+    position: fixed;
+    left: -999px;
 }
 
 .topbar_right .dropdown > li:first-child > a:after, .topbar_right .dropdown > li:last-child > a:after {
@@ -184,18 +179,18 @@ ul.dropdown {
     right: 0;
 }
 
-#content div[title="Full Chapter View"] {
+#content div[title="Full Chapter View"], #content div[title="Single Page View"] {
     opacity: 0;
     transition: opacity 200ms;
 }
 
-#content div[title="Full Chapter View"] > a {
+#content div[title="Full Chapter View"] > a, #content div[title="Single Page View"] > a {
     cursor: pointer;
 }
 
-#header:hover + #content div[title="Full Chapter View"], div[title="Full Chapter View"]:hover {
+#header:hover + #content div[title="Full Chapter View"], div[title="Full Chapter View"]:hover, #header:hover + #content div[title="Single Page View"], div[title="Single Page View"]:hover {
     position: fixed;
-    bottom: 0;
+    bottom: 6px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -203,10 +198,30 @@ ul.dropdown {
     opacity: .2;
 }
 
-#header + #content div[title="Full Chapter View"]:hover {
+#header + #content div[title="Full Chapter View"]:hover, #header + #content div[title="Single Page View"]:hover {
     opacity: .8;
     background-color: #333;
     border-radius: 10px;
 }
 
+#page .inner {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3005;
+    background-color: #34353B;
+    overflow: auto;
+}
+
+.inner:after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3006;
+}
 }
