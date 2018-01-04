@@ -6,6 +6,7 @@ Read [INSTALL.md](https://github.com/ewasion/userstyles/blob/master/INSTALL.md)
 
 ### Browse styles
 
+[AnimeBytes](https://ewasion.github.io/userstyles/animebytes/)  
 [Discord](https://ewasion.github.io/userstyles/discord/)  
 [Doujins.com](https://ewasion.github.io/userstyles/doujins.com/)  
 [ExHentai](https://ewasion.github.io/userstyles/exhentai/)  

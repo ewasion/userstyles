@@ -1,0 +1,194 @@
+#logo a {
+    background: url("logo.png") 0px -70px no-repeat;
+}
+
+#logo a:hover {
+    background: url("logo.png") 0px -105px no-repeat;
+}
+
+img[src="/static/common/symbols/bold.png"] {
+    width: 0px;
+    height: 20px;
+    padding-right: 20px;
+    background: transparent url('blue/bold.png') top left no-repeat;
+}
+
+img[src="/static/common/symbols/italics.png"] {
+    width: 0px;
+    height: 20px;
+    padding-right: 20px;
+    background: transparent url('blue/italics.png') top left no-repeat;
+}
+
+img[src="/static/common/symbols/underline.png"] {
+    width: 0px;
+    height: 20px;
+    padding-right: 20px;
+    background: transparent url('blue/underline.png') top left no-repeat;
+}
+
+img[src="/static/common/symbols/strikethrough.png"] {
+    width: 0px;
+    height: 20px;
+    padding-right: 20px;
+    background: transparent url('blue/strikethrough.png') top left no-repeat;
+}
+
+img[src="/static/common/symbols/spoilers.png"] {
+    width: 0px;
+    height: 20px;
+    padding-right: 20px;
+    background: transparent url('blue/spoilers.png') top left no-repeat;
+}
+
+img[src="/static/common/symbols/hide.png"] {
+    width: 0px;
+    height: 20px;
+    padding-right: 20px;
+    background: transparent url('blue/hide.png') top left no-repeat;
+}
+
+img[src="/static/common/symbols/code.png"] {
+    width: 0px;
+    height: 20px;
+    padding-right: 20px;
+    background: transparent url('blue/code.png') top left no-repeat;
+}
+
+img[src="/static/common/symbols/url.png"] {
+    width: 0px;
+    height: 20px;
+    padding-right: 20px;
+    background: transparent url('blue/url.png') top left no-repeat;
+}
+
+img[src="/static/common/symbols/image.png"] {
+    width: 0px;
+    height: 20px;
+    padding-right: 20px;
+    background: transparent url('blue/image.png') top left no-repeat;
+}
+
+img[src="/static/common/symbols/quote.png"] {
+    width: 0px;
+    height: 20px;
+    padding-right: 20px;
+    background: transparent url('blue/quote.png') top left no-repeat;
+}
+
+img[src="/static/common/symbols/list.png"] {
+    width: 0px;
+    height: 20px;
+    padding-right: 20px;
+    background: transparent url('blue/list.png') top left no-repeat;
+}
+
+img[src="/static/common/symbols/webm.png"] {
+    width: 0px;
+    height: 20px;
+    padding-right: 20px;
+    background: transparent url('blue/webm.png') top left no-repeat;
+}
+
+img[src="/static/common/symbols/youtube.png"] {
+    width: 0px;
+    height: 20px;
+    padding-right: 20px;
+    background: transparent url('blue/youtube.png') top left no-repeat;
+}
+
+img[src="/static/common/symbols/soundcloud.png"] {
+    width: 0px;
+    height: 20px;
+    padding-right: 20px;
+    background: transparent url('blue/soundcloud.png') top left no-repeat;
+}
+
+img[src="/static/common/symbols/color_one.png"] {
+    width: 0px;
+    height: 20px;
+    padding-right: 20px;
+    background: transparent url('blue/color_one.png') top left no-repeat;
+}
+
+img[src="/static/common/symbols/num_list.png"] {
+    width: 0px;
+    height: 20px;
+    padding-right: 20px;
+    background: transparent url('blue/num_list.png') top left no-repeat;
+}
+
+img[src="/static/common/symbols/user_four.png"] {
+    width: 0px;
+    height: 20px;
+    padding-right: 20px;
+    background: transparent url('blue/user_four.png') top left no-repeat;
+}
+
+img[src="/static/common/symbols/torrent_three.png"] {
+    width: 0px;
+    height: 20px;
+    padding-right: 20px;
+    background: transparent url('blue/torrent_three.png') top left no-repeat;
+}
+
+img[src="/static/common/symbols/align.png"] {
+    width: 0px;
+    height: 20px;
+    padding-right: 20px;
+    background: transparent url('blue/align.png') top left no-repeat;
+}
+
+#bbcode > #smileysbox span {
+    background: rgba(0,0,0,0.5);
+    border: none;
+}
+
+#bbcode > #smileysbox > span {
+    width: 0px;
+    height: 20px;
+    padding-right: 20px;
+    margin: 0;
+    background: transparent url('blue/smileys.png') top left no-repeat !important;
+}
+
+#bbcode > #smileysbox {
+    background: transparent;
+    margin-left: -7px;
+}
+
+#bbcode > #smileysbox > #smileys {
+    width: 345px;
+    z-index: 2;
+}
+
+#quickpostform textarea {
+    z-index: 1;
+}
+
+img[src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAeRJREFUeNpiYWBgaGCgImBioDJgQebYuGoayYQaGTDKCor+//7rB8OFJ08PLzp56OmDt69A8rwCXNyeSVbOjObyckz8XNz/X356/2bTpWt71p4/AjODEeZln3wnb35/PRN0G//9+ftrd9qyuW+AhoavTy9g4efkR1fz8/j9G2uqN64EsZmB2MHMS8dUKsnSHpsXGJmYmOWN5GS1fXQNWCX5xbB6U1ZQRJKVmf3uucd3wWGo4Kurgy9cWGUFJViVRGTwqRF0UleGRwqzkogExbErzC0AN/D/rz+/KDXw/99/f+EG/r0HiUWKDHz95SPcwNfH7j6g1MCv5x8/hRt4YOXZw7+uv3hIrmF/Xn5+vWXCvi0oOWV749b1fz///EyyV//9/3eya9dOjKz35dXnj4dL16789+vvD1IMvNayfeOD84/vYs3LT2+9enq2aM0yYg19ADTswoFbl5DFwDkFWeDt6y+fXh+4fVPOUU2ViYOVE5tB/37//XmmdN2KC8fvXyeqtHn55P2b9bELZ/19/hEjOf39+vPLvqwVC29deHKXpOLr19efP1ZEz5/+6/arx/DYfP357Y74RTNf3n39HJc+DC9jBPqWy+e1bVVU/////2d94uI5Xz99/4ZPPeOgL7EBAgwA4pbS9NwMCqsAAAAASUVORK5CYII="] {
+    width: 0px;
+    height: 20px;
+    padding-right: 20px;
+    background: transparent url('blue/aldy.png') top left no-repeat;
+}
+
+#searchbars input[value='Series']:focus {
+    background: #35353f url("light searchbg.png") 0px 3px no-repeat;
+}
+
+#searchbars input[value='Albums']:focus {
+    background: #35353f url("light searchbg.png") 0px -37px no-repeat;
+}
+
+#searchbars input[value='Artist']:focus {
+    background: #35353f url("light searchbg.png") 0px -77px no-repeat;
+}
+
+#searchbars input[value='Forums']:focus {
+    background: #35353f url("light searchbg.png") 0px -117px no-repeat;
+}
+
+#searchbars input[value='Users']:focus {
+    background: #35353f url("light searchbg.png") 0px -153px no-repeat;
+}
