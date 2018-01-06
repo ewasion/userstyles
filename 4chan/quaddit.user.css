@@ -1,0 +1,191 @@
+/* ==UserStyle==
+@name           Quaddit
+@namespace      github.com/ewasion/userstyles
+@version        0.1.0
+@description    BECOME A REDDITOR
+@author         Eva <hax@riseup.net> (https://github.com/ewasion)
+@license        GPL-3.0
+@supportURL     https://github.com/ewasion/userstyles/issues/new?title=[4chan/quaddit]%20Short%20description%20of%20the%20issue&assignee=ewasion&body=%23%23%23%20Info%0D%0AInfo%20about%20the%20bug%0D%0A%0D%0A%23%23%23%20Repro%20Steps%0D%0A1.%20As%20many%20possible%0D%0A2.%20Steps%20on%20what%20to%20do%0D%0A3.%20To%20reproduce%20the%0D%0A4.%20Bug%0D%0A%0D%0A%23%23%23%20Expected%20occurrence%0D%0AWhat%20is%20expected%20to%20happen.%0D%0A%0D%0A%23%23%23%20Actual%20occurrence%0D%0AWhat%20really%20happens.%0D%0A%0D%0A%23%23%23%20Impact%20on%20user%0D%0AThe%20exact%20consequence%20of%20the%20bug.%0D%0A%0D%0A%23%23%23%20Repro%20success-rate%0D%0AHow%20much%20you%20can%20reproduce%20it.%0D%0A%0D%0A%23%23%23%20Browser%28s%29%20used%2Ftested%0D%0AAll%20browers%20you%20tested%20with%20%28And%20their%20operating%20system%29%0D%0ALike%20so%3B%20Firefox%203.0.15%20%28win%20XP%29
+@homepageURL    https://ewasion.github.io/userstyles/4chan/
+==/UserStyle== */
+
+@-moz-document domain("boards.4chan.org") {
+body {
+    background: white;
+    margin: 0;
+    padding: 0;
+	overflow-x: hidden;
+}
+
+.boardBanner {
+    background-color: #cee3f8;
+}
+
+#boardNavDesktop, div#boardNavMobile {
+    background-color: #f0f0f0;
+    border-bottom: 1px solid grey;
+}
+
+#boardNavDesktop:before, div#boardNavMobile:before {
+    content: 'MY SUBREDDITS \25bc';
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+div#boardNavDesktop a, #boardNavDesktop:before, div#boardNavMobile:before, div.boardBanner > div.boardTitle {
+    color: black;
+}
+
+hr {
+    display: none;
+}
+
+#bannerCnt img {
+    display: none;
+}
+
+#bannerCnt {
+    background: url(https://upload.wikimedia.org/wikipedia/en/thumb/8/82/Reddit_logo_and_wordmark.svg/1280px-Reddit_logo_and_wordmark.svg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    height: 40px;
+    width: 120px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+div.boardBanner {
+    text-align: left;
+    border-bottom: 1px solid #5f99cf;
+}
+
+div.boardBanner > div.boardTitle {
+    font: normal x-small verdana, arial, helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.2em;
+    font-size: x-small;
+    letter-spacing: initial;
+    display: inline-block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.boardList {
+    text-transform: uppercase;
+    color: transparent;
+    font-size: 0;
+}
+
+#boardNavDesktop, #boardNavMobile, .boardList {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#navtopright {
+    float: none;
+    position: absolute;
+    right: 0;
+    background: #f0f0f0;
+}
+
+.boardList a {
+    font-size: 8pt;
+}
+
+.boardList a:not(:last-child):after {
+    content: ' -';
+    color: black;
+}
+
+#blotter tbody tr, #togglePostFormLink, .middlead, #globalMessage {
+    display: none;
+}
+
+#blotter tbody {
+    height: 124px;
+}
+
+#blotter tbody:before {
+    content: '';
+    background: url('https://www.redditstatic.com/listingsignupbar-orbit-1.png') center right no-repeat #fefbda !important;
+    height: 124px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+#blotter tbody:after {
+    content: 'Welcome to Reddit,\a\a the front page of the internet.\a BECOME A REDDITOR and subscribe to one of thousands of communities.';
+    font-size: 20px;
+    font-weight: bold;
+    white-space: pre;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    position: absolute;
+    left: 0;
+}
+
+#blotter tfoot {
+    padding-top: 124px;
+}
+
+#blotter tfoot span {
+    display: none;
+}
+
+#blotter tfoot td {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0;
+}
+
+#blotter tbody:not([style="display: none;"]) + tfoot td a:before {
+    content: 'X';
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: rgba(255,255,255,0.62);
+    font-size: 16px;
+    width: 26px;
+    height: 26px;
+    line-height: 24px;
+    text-align: center;
+}
+
+#blotter {
+    position: relative;
+    width: 100%;
+}
+
+.pages.cataloglink {
+    font: normal x-small verdana,arial,helvetica,sans-serif;
+    display: inline;
+    font-weight: bold;
+}
+
+.pages.cataloglink a:before {
+    color: #369;
+    border: 1px solid #5f99cf;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(95, 153, 207);
+    border-bottom: 1px solid white;
+    z-index: 100;
+    padding: 2px 6px 0 6px;
+    background-color: #eff7ff;
+    position: absolute;
+    top: 50px;
+}
+
+.pagelist a[href="./catalog"]:before {
+    content: 'catalog';
+}
+
+.pagelist a[href="./archive"]:before {
+    content: 'archive';
+    margin-left: -7px;
+}
+}
