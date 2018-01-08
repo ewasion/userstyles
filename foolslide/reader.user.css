@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           FoOlSlide reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.84
+@version        0.1.85
 @description    Removes clutter from FoOlSlide's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -15,7 +15,7 @@ body {
     direction: ltr;
 }
 
-#disqus_thread, .topbar .current_page + div ~ div, #navig ~ div, #header > a, #header img:not([src*=feed-icon]), .dh, .inner .preview, .navbar-header {
+#disqus_thread, .topbar .current_page + div ~ div, #navig ~ div, #header > a, #header img:not([src*=feed-icon]), .dh, .inner .preview, .navbar-header, nav > #logo, nav > .menu > li:nth-child(5), nav > .menu > li:nth-child(6), nav > .menu > li:last-child {
     display: none;
 }
 
@@ -32,7 +32,7 @@ div#wrapper {
     background: none;
 }
 
-.topbar .current_page + div > a {
+.topbar .current_page + div > a, button[onclick="prevPage()"] {
     height: 100%;
     left: 0;
     position: fixed;
@@ -80,7 +80,7 @@ div#wrapper {
     z-index: 3010;
 }
 
-.topbar_left {
+.topbar_left:not([style="display: inline-block"]), .dh_left {
     position: fixed;
     left: 0;
     bottom: 0;
@@ -110,7 +110,7 @@ div#wrapper {
     margin: 0;
 }
 
-.navbar-nav {
+.navbar-nav, nav > .menu, nav > .menu > li:nth-child(3) {
     float: right;
 }
 
@@ -122,7 +122,11 @@ div#wrapper {
     width: auto;
 }
 
-#header, .navbar {
+nav > .menu > li {
+    background: none;
+}
+
+#header, .navbar, nav:not(.navbar):not(.footer-nav) {
     position: fixed;
     top: auto !important;
     left: 0;
@@ -139,26 +143,27 @@ div#wrapper {
     padding: 0;
 }
 
-#header a, .navbar a, .topbar_left a, .dropdown a, .dropdown-menu a {
+#header a, .navbar a, nav:not(.navbar):not(.footer-nav) a, .topbar_left a, .dropdown a, .dropdown-menu a {
     cursor: pointer;
 }
 
-#header:hover, .navbar:hover, .topbar_left:hover, .topbar_right .dropdown > li:first-child > a:hover:after, .topbar_right .dropdown > li:last-child > a:hover:after, .topbar_right .dropdown-menu > li:first-child > a:hover:after, .topbar_right .dropdown-menu > li:last-child > a:hover:after {
+#header:hover, .navbar:hover, nav:not(.navbar):not(.footer-nav):hover, .topbar_left:not([style="display: inline-block"]):hover, .dh_left:hover, .topbar_right .dropdown > li:first-child > a:hover:after, .topbar_right .dropdown > li:last-child > a:hover:after, .topbar_right .dropdown-menu > li:first-child > a:hover:after, .topbar_right .dropdown-menu > li:last-child > a:hover:after {
     opacity: .8;
 }
 
-#header:hover ~ #content .topbar_left, #header:hover ~ #content .pagenumber, .navbar:hover ~ #content .topbar_left, .navbar:hover ~ #content .pagenumber {
+#header:hover ~ #content .topbar_left, #header:hover ~ #content .pagenumber, .navbar:hover ~ #content .topbar_left, .navbar:hover ~ #content .pagenumber, nav:not(.navbar):not(.footer-nav):hover ~ #content .dh_left, nav:not(.navbar):not(.footer-nav):hover ~ #content .pagenumber {
     opacity: .8;
     background: none;
 }
 
 .topbar_right .dropdown, .topbar_right .dropdown-menu {
     display: block;
-    font-family: sans-serif;
+    font-family: 'Exo 2', 'Open Sans', sans-serif;
 }
 
 .topbar_right .dropdown_parent, .topbar_right .dropdown-menu {
     position: fixed;
+    display: block;
     left: -999px;
 }
 
