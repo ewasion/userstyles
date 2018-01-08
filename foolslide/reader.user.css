@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           FoOlSlide reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.83
+@version        0.1.84
 @description    Removes clutter from FoOlSlide's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -15,7 +15,7 @@ body {
     direction: ltr;
 }
 
-#disqus_thread, .topbar .current_page + div ~ div, #navig ~ div, #header > a, #header img:not([src*=feed-icon]), .dh, .inner .preview {
+#disqus_thread, .topbar .current_page + div ~ div, #navig ~ div, #header > a, #header img:not([src*=feed-icon]), .dh, .inner .preview, .navbar-header {
     display: none;
 }
 
@@ -67,15 +67,16 @@ div#wrapper {
     z-index: 3007;
 }
 
-.topbar_left ul.dropdown {
+.topbar_left ul.dropdown, .topbar_left .dropdown-menu {
     position: fixed;
     bottom: 37px;
     top: auto;
+    left: auto;
     margin: 0;
     z-index: 3010;
 }
 
-.dropdown_parent {
+.dropdown_parent, .dropdown-menu {
     z-index: 3010;
 }
 
@@ -109,8 +110,21 @@ div#wrapper {
     margin: 0;
 }
 
-#header {
+.navbar-nav {
+    float: right;
+}
+
+.navbar-form {
+    margin-right: 0;
+}
+
+.navbar .container {
+    width: auto;
+}
+
+#header, .navbar {
     position: fixed;
+    top: auto !important;
     left: 0;
     right: 0;
     bottom: 0;
@@ -125,34 +139,30 @@ div#wrapper {
     padding: 0;
 }
 
-#header a, .topbar_left a, .dropdown a {
+#header a, .navbar a, .topbar_left a, .dropdown a, .dropdown-menu a {
     cursor: pointer;
 }
 
-#header:hover, .topbar_left:hover, .topbar_right .dropdown > li:first-child > a:hover:after, .topbar_right .dropdown > li:last-child > a:hover:after {
+#header:hover, .navbar:hover, .topbar_left:hover, .topbar_right .dropdown > li:first-child > a:hover:after, .topbar_right .dropdown > li:last-child > a:hover:after, .topbar_right .dropdown-menu > li:first-child > a:hover:after, .topbar_right .dropdown-menu > li:last-child > a:hover:after {
     opacity: .8;
 }
 
-#header:hover ~ #content .topbar_left, #header:hover ~ #content .pagenumber {
+#header:hover ~ #content .topbar_left, #header:hover ~ #content .pagenumber, .navbar:hover ~ #content .topbar_left, .navbar:hover ~ #content .pagenumber {
     opacity: .8;
     background: none;
 }
 
-.navbar {
-    z-index: 10;
-}
-
-.topbar_right .dropdown {
+.topbar_right .dropdown, .topbar_right .dropdown-menu {
     display: block;
     font-family: sans-serif;
 }
 
-.topbar_right .dropdown_parent {
+.topbar_right .dropdown_parent, .topbar_right .dropdown-menu {
     position: fixed;
     left: -999px;
 }
 
-.topbar_right .dropdown > li:first-child > a:after, .topbar_right .dropdown > li:last-child > a:after {
+.topbar_right .dropdown > li:first-child > a:after, .topbar_right .dropdown > li:last-child > a:after, .topbar_right .dropdown-menu > li:first-child > a:after, .topbar_right .dropdown-menu > li:last-child > a:after {
     font-weight: bold;
     font-size: 40px;
     font-style: normal;
@@ -170,12 +180,12 @@ div#wrapper {
     background: #333;
 }
 
-.topbar_right .dropdown > li:first-child > a:after {
+.topbar_right .dropdown > li:first-child > a:after, .topbar_right .dropdown-menu > li:first-child > a:after {
     content: '\000AB';
     left: 0;
 }
 
-.topbar_right .dropdown > li:last-child > a:after {
+.topbar_right .dropdown > li:last-child > a:after, .topbar_right .dropdown-menu > li:last-child > a:after {
     content: '\000BB';
     right: 0;
 }
