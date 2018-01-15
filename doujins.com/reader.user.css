@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Doujins.com reader
 @namespace      github.com/ewasion/userstyles
-@version        0.171
+@version        0.172
 @description    Removes clutter from Doujins.com's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -112,14 +112,10 @@ a {
     height: 37px;
     padding-left: 10px;
     padding-right: 10px;
+    right: 82px;
     bottom: 0;
     display: flex;
     align-items: center;
-}
-
-#thumbnails.hidden .link-area > a[data-toggle="modal"][data-target="#login"]:not([data-state]) > span:hover:after, #thumbnails.hidden .link-area > a[href^="/zip/"] > span:hover:after {
-    content: '\0000a0Download';
-    font-family: sans-serif;
 }
 
 #images > div > div > .controls > a:first-child {
@@ -177,7 +173,7 @@ a {
     right: 0;
 }
 
-#images > div > div > .controls:hover, .col-md-9 + .text-md-right:hover ~ .col-xs-12 #images > div > div > .controls, #thumbnails.hidden div.col-xs-6:not(.pull-right):first-child a:hover:after, #thumbnails.hidden div.col-xs-6:last-child:not(.pull-right) a:hover:after, #images:hover + #thumbnails.hidden .link-area > a[data-toggle="modal"][data-target="#login"]:not([data-state]) > span, #images:hover + #thumbnails.hidden .link-area > a[href^="/zip/"] > span, #gallery:hover ~ #comments .comments-box:before {
+#images > div > div > .controls:hover, .col-md-9 + .text-md-right:hover ~ .col-xs-12 #images > div > div > .controls, #thumbnails.hidden div.col-xs-6:not(.pull-right):first-child a:hover:after, #thumbnails.hidden div.col-xs-6:last-child:not(.pull-right) a:hover:after, #images:hover + #thumbnails.hidden .link-area > a[data-toggle="modal"][data-target="#login"]:not([data-state]) > span, #images:hover + #thumbnails.hidden .link-area > a[href^="/zip/"] > span, #gallery ~ #comments .comments-box:before {
     opacity: .8;
 }
 
