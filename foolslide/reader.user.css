@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           FoOlSlide reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.85
+@version        0.1.86
 @description    Removes clutter from FoOlSlide's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -15,7 +15,7 @@ body {
     direction: ltr;
 }
 
-#disqus_thread, .topbar .current_page + div ~ div, #navig ~ div, #header > a, #header img:not([src*=feed-icon]), .dh, .inner .preview, .navbar-header, nav > #logo, nav > .menu > li:nth-child(5), nav > .menu > li:nth-child(6), nav > .menu > li:last-child {
+#disqus_thread, .topbar .current_page + div ~ div, #navig ~ div, #header > a, #header img:not([src*=feed-icon]), .dh, .inner .preview, .navbar-header, nav > #logo, nav > .menu > li:nth-child(5), nav > .menu > li:nth-child(6), nav > .menu > li:last-child, .divider[style^="width: 100px;"] {
     display: none;
 }
 
@@ -126,6 +126,10 @@ nav > .menu > li {
     background: none;
 }
 
+.icon_wrapper .icon.on {
+    display: block;
+}
+
 #header, .navbar, nav:not(.navbar):not(.footer-nav) {
     position: fixed;
     top: auto !important;
@@ -141,6 +145,7 @@ nav > .menu > li {
     background: #333;
     display: block !important;
     padding: 0;
+    max-width: none;
 }
 
 #header a, .navbar a, nav:not(.navbar):not(.footer-nav) a, .topbar_left a, .dropdown a, .dropdown-menu a {
