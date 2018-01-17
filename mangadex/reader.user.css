@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           MangaDex reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1
+@version        0.11
 @description    Removes clutter from MangaDex's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -24,7 +24,7 @@
     opacity: .9;
 }
 
-[data-id="jump_page"] + .dropdown-menu li > a:after, [data-id="jump_page"] + .dropdown-menu li.selected + li > a:after, [data-id="jump_chapter"] + .dropdown-menu li.selected + li > a:after {
+[data-id="jump_page"] + .dropdown-menu li > a:after, [data-id="jump_chapter"] + .dropdown-menu li > a:after, [data-id="jump_page"] + .dropdown-menu li.selected + li > a:after, [data-id="jump_chapter"] + .dropdown-menu li.selected + li > a:after {
     content: '';
     height: 100%;
     position: fixed;
@@ -35,7 +35,7 @@
 
 [data-id="jump_page"] + .dropdown-menu li > a:after {
     width: 50%;
-    z-index: 11;
+    z-index: 12;
 }
 
 [data-id="jump_page"] + .dropdown-menu li.selected + li > a:after {
@@ -48,11 +48,23 @@
     z-index: 9;
 }
 
-[data-id="jump_page"] + .dropdown-menu li.selected > a:after, [data-id="jump_page"] + .dropdown-menu li.selected ~ li > a:after {
+[data-id="jump_chapter"] + .dropdown-menu li > a:after {
+    width: 50%;
+    z-index: 11;
+}
+
+.dropdown-menu li.selected[data-original-index="0"] + li > a:after {
+    width: 50%;
+    right: 0;
+    left: auto;
+    z-index: 11;
+}
+
+[data-id="jump_page"] + .dropdown-menu li.selected > a:after, [data-id="jump_page"] + .dropdown-menu li.selected ~ li > a:after, [data-id="jump_chapter"] + .dropdown-menu li.selected ~ li > a:after, [data-id="jump_chapter"] + .dropdown-menu li.selected > a:after, [data-id="jump_page"] + .dropdown-menu li.selected[data-original-index="0"] > a:after, [data-id="jump_page"] {
     display: none;
 }
 
-[data-id="jump_page"] .dropdown-menu li.selected + li > a:after, [data-id="jump_page"] + .dropdown-menu li.selected + li > a:after {
+[data-id="jump_page"] + .dropdown-menu li.selected + li > a:after, [data-id="jump_page"] + .dropdown-menu li.selected + li > a:after {
     display: block;
 }
 
