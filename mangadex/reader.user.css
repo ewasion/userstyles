@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           MangaDex reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.2
+@version        0.1.3
 @description    Removes clutter from MangaDex's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -68,7 +68,7 @@
     display: block;
 }
 
-#current_page {
+#current_page, img::after {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -125,5 +125,13 @@
 
 [data-id="jump_page"] + .dropdown-menu li:first-child > a:hover:before, [data-id="jump_page"] + .dropdown-menu li:last-child > a:hover:before {
     opacity: .8;
+}
+
+img::after {
+    content: 'Image failed to load';
+    color: #E3E0D1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 }
