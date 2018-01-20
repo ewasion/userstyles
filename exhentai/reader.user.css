@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           ExHentai reader
 @namespace      github.com/ewasion/userstyles
-@version        0.2.3
+@version        0.2.4
 @description    Removes clutter from sadpanda's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -109,6 +109,7 @@ a {
 #i4 a:first-child::after {
     content: '\000AB';
     font-size: 40px;
+    margin-top: -8px;
 }
 
 #i4 a:last-child { /* Jump to last page */
@@ -119,6 +120,7 @@ a {
 #i4 a:last-child::after {
     content: '\000BB';
     font-size: 40px;
+    margin-top: -8px;
 }
 
 #i4 > div > div { /* Page number */
