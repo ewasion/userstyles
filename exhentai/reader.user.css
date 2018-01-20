@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           ExHentai reader
 @namespace      github.com/ewasion/userstyles
-@version        0.2.2
+@version        0.2.3
 @description    Removes clutter from sadpanda's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -220,13 +220,16 @@ h1:hover ~ #i4 > div:first-child, h1:hover ~ #i4 > div > div, h1:hover ~ #i4::af
     background: linear-gradient(to bottom, rgba(0, 0, 0, .6) 50%, transparent 100%);
 }
 
-#i2:hover ~ #i6 > a:first-of-type, #i2:hover ~ #i6 > a:last-of-type, #i2:hover ~ #i7 > a, #i2:hover ~ #i5 a::after, #i2:hover ~ #i5::before, #i2:hover::before, #i6 > a:first-of-type:hover, #i6 > a:last-of-type:hover, #i7 > a:hover, div.sb > a:hover::after, #i5:hover::before {
+#i2:hover ~ #i6 > a:first-of-type, #i2:hover ~ #i6 > a:last-of-type, #i2:hover ~ #i7 > a, #i2:hover ~ #i5 a::after, #i2:hover ~ #i5::before, #i2:hover::before, #i6 > a:first-of-type:hover, #i6 > a:last-of-type:hover, #i7 > a:hover, div.sb > a:hover::after {
     opacity: 1;
     pointer-events: auto;
 }
 
-#i6 > a:first-of-type:hover, #i6 > a:last-of-type:hover, #i7 > a:hover, div.sb > a:hover::after, #i5:hover::before {
-    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, .6) 50%, transparent 100%);
+#i6 > a:first-of-type:hover, #i6 > a:last-of-type:hover, #i7 > a:hover, div.sb > a:hover::after {
+    right: 0;
+    left: 0;
+    padding: 20px;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, .6) 20%, rgba(0, 0, 0, .6) 80%, transparent 100%);
 }
 
 #i6 > a:first-of-type, #i6 > a:last-of-type, #i7 > a, div.sb > a::after, #i5::before {
