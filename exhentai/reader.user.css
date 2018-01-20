@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           ExHentai reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.0
+@version        0.2.0
 @description    Removes clutter from sadpanda's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -10,8 +10,19 @@
 ==/UserStyle== */
 
 @-moz-document url-prefix("https://exhentai.org/s/"), url-prefix("https://e-hentai.org/s/"), url-prefix("https://madpanda.cf/s/") {
-#i4 > div:not(.sn), #i4 > .sn > :not(:last-child), #i6, .ip, .sn > a > img, .sb > a > img {
-    display: none;
+#i1 > h1, #i4 > div:first-child, #i4 > div > div, #i4 a:first-child, #i4 a:last-child, #i2::after, a { /* Text color */
+    color: #E3E0D1;
+}
+
+#i4::before { /* Background */
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background: #34353B;
 }
 
 body {
@@ -22,37 +33,6 @@ a {
     outline: none;
 }
 
-#i1 {
-    background-color: inherit;
-}
-
-#i7 {
-    position: fixed;
-    z-index: 25;
-    left: -100%;
-}
-
-#i7 a:hover:before {
-    opacity: 1;
-}
-
-#i7 a:before {
-    content: 'Download';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    font-weight: bold;
-    opacity: 0;
-    transition: all 200ms;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, .4) 80%, transparent 100%);
-}
-
-div.sni {
-    border: none;
-}
-
 #img {
     position: fixed;
     top: 0;
@@ -60,103 +40,19 @@ div.sni {
     left: 0;
     right: 0;
     margin: auto;
-    max-width: 100% !important;  /* ExHentai uses */
-    max-height: 100% !important; /* inline styles */
-    height: auto !important;     /* for this, I'm */
-    width: auto !important;      /* deeply sorry. */
+    max-width: 100% !important;
+    max-height: 100% !important;
+    height: auto !important;
+    width: auto !important;
     z-index: 6;
 }
 
 #prev, #next {
     cursor: default;
-}
-
-div.sb {
-    z-index: 20;
-}
-
-.sb > a {
-    bottom: 0;
-    left: 0;
-    position: fixed;
-    text-decoration: none;
-    width: 100%;
-    z-index: 20;
-}
-
-.sb > a:after {
-    content: 'v';
-    font-family: arial, helvetica, sans-serif;
-    font-size: 10pt;
-    font-weight: bold;
     opacity: 0;
 }
 
-.sb > a:hover {
-    background: linear-gradient(to top, rgba(0, 0, 0, .4) 50%, transparent 100%);
-}
-
-.sn > a:first-child:hover {
-    background: linear-gradient(to right, rgba(0, 0, 0, .4) 80%, transparent 100%);
-}
-
-#i4 > .sn > a:last-child:hover {
-    background: linear-gradient(to left, rgba(0, 0, 0, .4) 80%, transparent 100%);
-}
-
-div.sn > div {
-    color: #000;
-    bottom: 0;
-    left: 0;
-    margin: 0;
-    opacity: 0;
-    position: fixed;
-    transition: all 200ms;
-    width: 100%;
-    z-index: 15;
-}
-
-.sn > div:after {
-    content: '\a v';
-    white-space: pre;
-}
-
-.sn > div:hover {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.sn > div:hover, .sn > a:first-child:hover, #i4 > .sn > a:last-child:hover, #i2 > .sn > div:hover ~ a:last-child, .sb > a:hover:after {
-    opacity: 1;
-}
-
-.sn + div {
-    bottom: 0;
-    font-weight: bold;
-    margin-right: 10px;
-    right: 0;
-    overflow: hidden;
-    position: fixed;
-    text-align: right;
-    white-space: nowrap;
-    width: 45%;
-    z-index: 5;
-}
-
-div.sni h1 {
-    bottom: 0;
-    font-size: inherit;
-    margin-bottom: 0;
-    margin-left: 10px;
-    left: 0;
-    overflow: hidden;
-    position: fixed;
-    text-align: left;
-    white-space: nowrap;
-    width: 45%;
-    z-index: 5;
-}
-
-#prev {
+#prev { /* Previous page */
     height: 100%;
     left: 0;
     position: fixed;
@@ -165,7 +61,7 @@ div.sni h1 {
     z-index: 7;
 }
 
-#next {
+#next { /* Next page */
     height: 100%;
     left: 50%;
     position: fixed;
@@ -174,88 +70,219 @@ div.sni h1 {
     z-index: 8;
 }
 
-.sn > a:first-child {
-    font-weight: bold;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+.ip > a::after { /* Front page link */
+    content: 'v';
+    bottom: 0;
     left: 0;
+    right: 0;
     position: fixed;
-    top: 0;
-    transition: all 200ms;
-    width: 40px;
-    z-index: 10;
     text-decoration: none;
-    opacity: 0;
-}
-
-.sn > a:first-child:before {
-    content: '\000AB';
-    font-size: 2em;
-}
-
-#i4 > .sn > a:last-child {
+    font-family: arial, helvetica, sans-serif;
+    font-size: 10pt;
     font-weight: bold;
-    font-size: 20px;
+    opacity: 0;
+    transition: opacity 200ms;
+    background: linear-gradient(to top, rgba(0, 0, 0, .4) 50%, transparent 100%);
+    z-index: 11;
+}
+
+#i4 a:first-child, #i4 a:last-child {
+    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     position: fixed;
-    right: 0;
     top: 0;
-    transition: all 200ms;
+    transition: opacity 200ms;
     width: 40px;
-    z-index: 10;
+    z-index: 9;
     text-decoration: none;
     opacity: 0;
 }
 
-#i4 > .sn > a:last-child:before {
-    content: '\000BB';
-    font-size: 2em;
+#i4 a:first-child { /* Jump to first page */
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, .4) 80%, transparent 100%);
 }
 
-#i2 > .sn > a:last-child {
+#i4 a:first-child::after {
+    content: '\000AB';
+    font-size: 40px;
+}
+
+#i4 a:last-child { /* Jump to last page */
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, .4) 80%, transparent 100%);
+}
+
+#i4 a:last-child::after {
+    content: '\000BB';
+    font-size: 40px;
+}
+
+#i4 > div > div { /* Page number */
     bottom: 0;
     left: 0;
     margin: 0;
     opacity: 0;
     position: fixed;
-    transition: all 200ms;
     width: 100%;
-    z-index: 4;
+    z-index: 10;
+    transition: opacity 200ms;
 }
 
-#i2 > .sn > a:last-child:before {
-    content: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_!';
+#i4 > div > div::after { /* Fake 'v' */
+    content: '\a v';
+    white-space: pre;
+}
+
+#i4 > div > div:hover, #i4 a:first-child:hover, #i4 a:last-child:hover, .ip > a:hover::after {
+    opacity: 1;
+}
+
+div.sni > h1, #i4 > div:first-child {
+    bottom: 0;
+    font-size: inherit;
+    margin-bottom: 0;
+    overflow: hidden;
+    position: fixed;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 45%;
     opacity: 0;
+    transition: opacity 200ms;
+    font-weight: bold;
 }
 
-div.sn > div, .sb > a:after, #i7 a:before {
-    color: #E3E0D1;
-}
-}
-
-@-moz-document url-prefix("https://exhentai.org/s/"), url-prefix("https://madpanda.cf/s/") {
-.sn + div, h1, .sn > a:first-child:before, #i4 > .sn > a:last-child:before {
-    color: #34353B;
+div.sni > h1 { /* Gallery title */
+    margin-left: 10px;
+    left: 0;
+    text-align: left;
+    z-index: 12;
 }
 
-#i2 > .sn > div:hover ~ a:last-child {
-    background: linear-gradient(to top, rgba(255, 255, 255, .2) 50%, transparent 100%);
-}
-}
-
-@-moz-document url-prefix("https://e-hentai.org/s/") {
-.sn + div, h1, .sn > a:first-child:before, #i4 > .sn > a:last-child:before {
-    color: #E3E0D1;
+#i4 > div:first-child { /* File properties */
+    margin-right: 10px;
+    right: 0;
+    text-align: right;
+    z-index: 8;
 }
 
-#i2 > .sn > div:hover ~ a:last-child {
-    background: linear-gradient(to top, rgba(0, 0, 0, .2) 50%, transparent 100%);
+h1::after, #i4::after { /* Bottom bar */
+    content: '';
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 35px;
+    transition: opacity 200ms;
+}
+
+div.sni > h1:hover, h1:hover::after {
+    opacity: 1;
+}
+
+h1:hover ~ #i4 > div:first-child, h1:hover ~ #i4 > div > div, h1:hover ~ #i4::after, #i4 a:first-child:hover::before, #i4 a:last-child:hover::before, h1:hover ~ #i2::after {
+    opacity: 1;
+}
+
+#i4::after { /* Bottom bar background */
+    z-index: 7;
+    background: linear-gradient(to top, rgba(0, 0, 0, .4) 75%, transparent 100%);
+}
+
+#i2::after { /* 'More' toggle */
+    content: 'More';
+    z-index: 13;
+    position: fixed;
+    bottom: 17px;
+    right: 10px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 200ms;
+}
+
+#i2::before { /* 'More' menu */
+    content: '';
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 200ms;
+    pointer-events: none;
+    z-index: 13;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .6) 50%, transparent 100%);
+}
+
+#i2:hover ~ #i6 > a:first-of-type, #i2:hover ~ #i6 > a:last-of-type, #i2:hover ~ #i7 > a, #i2:hover ~ #i5 a::after, #i2:hover ~ #i5::before, #i2:hover::before, #i6 > a:first-of-type:hover, #i6 > a:last-of-type:hover, #i7 > a:hover, div.sb > a:hover::after, #i5:hover::before {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#i6 > a:first-of-type:hover, #i6 > a:last-of-type:hover, #i7 > a:hover, div.sb > a:hover::after, #i5:hover::before {
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, .6) 50%, transparent 100%);
+}
+
+#i6 > a:first-of-type, #i6 > a:last-of-type, #i7 > a, div.sb > a::after, #i5::before {
+    position: fixed;
+    font-weight: bold;
+    z-index: 15;
+    left: 20px;
+    margin: auto;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 200ms;
+}
+
+#i5:hover::before {
+    pointer-events: none;
+}
+
+div.sb img, #i4 a > img, .mr {
+    display: none;
+}
+
+div.sb {
+    z-index: 14;
+}
+
+div.sb > a::after { /* Back to gallery */
+    content: 'Back to gallery';
+    top: 185px;
+}
+
+#i6 > a:first-of-type { /* Image reload & gallery search */
+    top: 95px;
+}
+
+#i6 > a:last-of-type { /* Image reload & gallery search */
+    top: 125px;
+}
+
+#i7 > a { /* Download original */
+    top: 155px;
+}
+
+#i6 > a, #i7 > a {
+    text-decoration: none;
+}
+
+#i5::before {
+    content: 'Exit';
+    text-decoration: underline;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#i7:hover {
+    background: red;
 }
 }
 
