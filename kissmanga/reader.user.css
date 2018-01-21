@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           KissManga reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.1
+@version        0.1.0
 @description    Removes clutter from KissManga's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -21,11 +21,11 @@ body {
     z-index: 1001;
 }
 
-#divImage[style="padding-top: 10px"] p img {
+#divImage p img {
     display: none;
 }
 
-#divImage[style="padding-top: 10px"] p:first-child, script + div ~ #divImage, #divImage:empty + #divMsg {
+#divImage p:first-child, script + div ~ #divImage, #divImage:empty + #divMsg {
     background: #161616 !important;
     bottom: 0;
     left: 0;
@@ -39,7 +39,7 @@ body {
     z-index: 1000;
 }
 
-#divImage[style="padding-top: 10px"] p:first-child::before {
+#divImage p:first-child::before {
     background: #161616 !important;
     content: 'This userstyle doesn\'t work with the \'All pages\' reading type.\APlease select \'One page\' using the dropdown above.';
     white-space: pre;
