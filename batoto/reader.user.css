@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Batoto reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.4
+@version        0.1.5
 @description    Removes clutter from Batoto's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -25,7 +25,10 @@ body {
     background: #34353B;
 }
 
-#comic_page, #comic_wrap a {
+#comic_page, #comic_wrap a, #read_settings + div > a::after {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -34,6 +37,12 @@ body {
     margin: auto;
     max-height: 100%;
     cursor: default;
+}
+
+#read_settings + div > a::after {
+    content: 'Switch to single page reader';
+    background: #34353B;
+    z-index: 1;
 }
 
 #comic_wrap + .moderation_bar li:nth-child(8) > a[href*="_"], #comic_wrap + .moderation_bar li:nth-child(8) > a[href$="/"], #comic_wrap + .moderation_bar li:nth-child(9) > a[href*="_"], #comic_wrap + .moderation_bar li:nth-child(9) > a[href$="/"], #comic_wrap + .moderation_bar li > a[href$="_last"], #comic_wrap + .moderation_bar li:nth-child(7) > a[href*="_"], #comic_wrap + .moderation_bar li:nth-child(6) > a[href$="/"], #comic_wrap + .moderation_bar img[title="Next Chapter"], #comic_wrap + .moderation_bar img[title="Previous Chapter"] {
