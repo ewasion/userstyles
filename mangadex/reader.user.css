@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           MangaDex reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.5
+@version        0.1.6
 @description    Removes clutter from MangaDex's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -181,6 +181,10 @@ img::after {
 
 #content > div > div:first-child {
     width: 25%;
+}
+
+#content > div > div:first-child > span {
+    display: none;
 }
 
 #content> div > div:not(:first-child):not(:last-child) {
