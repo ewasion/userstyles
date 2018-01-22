@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Batoto reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.2
+@version        0.1.3
 @description    Removes clutter from Batoto's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -16,9 +16,11 @@ body {
 
 #comic_wrap > div:first-child { /* Background */
     position: fixed !important;
+    top: 0 !important;
     bottom: 0;
     left: 0;
     right: 0 !important;
+    margin-bottom: 0 !important;
     z-index: 1;
     background: #34353B;
 }
