@@ -14,7 +14,7 @@ body {
     overflow: hidden;
 }
 
-a {
+#comic_wrap > div:first-child > a {
     color: #E3E0D1;
 }
 
