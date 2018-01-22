@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Batoto reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.1
+@version        0.1.2
 @description    Removes clutter from Batoto's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -23,7 +23,7 @@ body {
     background: #34353B;
 }
 
-#comic_page {
+#comic_page, #comic_wrap a {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -31,26 +31,27 @@ body {
     right: 0;
     margin: auto;
     max-height: 100%;
+    cursor: default;
 }
 
-#comic_wrap + .moderation_bar img[title="Next Page"], #comic_wrap + .moderation_bar img[title="Previous Page"], #comic_wrap + .moderation_bar img[title="Next Chapter"], #comic_wrap + .moderation_bar img[title="Previous Chapter"] {
+#comic_wrap + .moderation_bar li:nth-child(8) > a[href*="_"], #comic_wrap + .moderation_bar li:nth-child(8) > a[href$="/"], #comic_wrap + .moderation_bar li:nth-child(9) > a[href*="_"], #comic_wrap + .moderation_bar li:nth-child(9) > a[href$="/"], #comic_wrap + .moderation_bar li > a[href$="_last"], #comic_wrap + .moderation_bar li:nth-child(7) > a[href*="_"], #comic_wrap + .moderation_bar li:nth-child(6) > a[href$="/"], #comic_wrap + .moderation_bar img[title="Next Chapter"], #comic_wrap + .moderation_bar img[title="Previous Chapter"] {
     position: fixed;
     opacity: 0;
     top: 0;
     height: 100%;
 }
 
-#comic_wrap + .moderation_bar img[title="Next Page"], #comic_wrap + .moderation_bar img[title="Previous Page"] {
+#comic_wrap + .moderation_bar li:nth-child(8) > a[href*="_"], #comic_wrap + .moderation_bar li:nth-child(8) > a[href$="/"], #comic_wrap + .moderation_bar li:nth-child(9) > a[href*="_"], #comic_wrap + .moderation_bar li:nth-child(9) > a[href$="/"], #comic_wrap + .moderation_bar li > a[href$="_last"], #comic_wrap + .moderation_bar li:nth-child(7) > a[href*="_"], #comic_wrap + .moderation_bar li:nth-child(6) > a[href$="/"] {
     z-index: 2;
     cursor: default;
 }
 
-#comic_wrap + .moderation_bar img[title="Next Page"] {
+#comic_wrap + .moderation_bar li:nth-child(8) > a[href*="_"], #comic_wrap + .moderation_bar li:nth-child(8) > a[href$="/"], #comic_wrap + .moderation_bar li:nth-child(9) > a[href*="_"], #comic_wrap + .moderation_bar li:nth-child(9) > a[href$="/"] { /* Next page */
     right: 0;
     width: 50%;
 }
 
-#comic_wrap + .moderation_bar img[title="Previous Page"] {
+#comic_wrap + .moderation_bar li > a[href$="_last"], #comic_wrap + .moderation_bar li:nth-child(7) > a[href*="_"], #comic_wrap + .moderation_bar li:nth-child(6) > a[href$="/"] { /* Previous page */
     left: 0;
     width: 50%;
 }
