@@ -9,7 +9,7 @@
 @homepageURL    https://ewasion.github.io/userstyles/batoto/
 ==/UserStyle== */
 
-@-moz-document regexp("http://bato.to/reader#.*") {
+@-moz-document regexp("https?://bato.to/reader#.*") {
 body {
     overflow: hidden;
 }
