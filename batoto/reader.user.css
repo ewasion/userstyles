@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Batoto reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.0
+@version        0.1.1
 @description    Removes clutter from Batoto's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -95,7 +95,7 @@ body {
     opacity: .9 !important;
 }
 
-#read_settings:not([style$="display: none;"]) {
+#read_settings:not([style$="display: none;"]):not([style$="display:none;"]) {
     opacity: .9;
     bottom: 55px;
 }
