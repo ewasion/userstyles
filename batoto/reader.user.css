@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Batoto reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.7
+@version        0.1.8
 @description    Removes clutter from Batoto's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -48,6 +48,12 @@ a {
     background: #34353B;
     z-index: 1;
 }
+
+/* Uncomment to use Batoto's background
+#ipbwrapper, #mainContent, #content, #reader, #comic_wrap, #comic_wrap > div:first-child {
+    background-image: inherit;
+}
+*/
 
 #comic_wrap + .moderation_bar li:nth-child(8) > a[href*="_"], #comic_wrap + .moderation_bar li:nth-child(8) > a[href$="/"], #comic_wrap + .moderation_bar li:nth-child(9) > a[href*="_"], #comic_wrap + .moderation_bar li:nth-child(9) > a[href$="/"], #comic_wrap + .moderation_bar li > a[href$="_last"], #comic_wrap + .moderation_bar li:nth-child(7) > a[href*="_"], #comic_wrap + .moderation_bar li:nth-child(6) > a[href$="/"], #comic_wrap + .moderation_bar img[title="Next Chapter"], #comic_wrap + .moderation_bar img[title="Previous Chapter"] {
     position: fixed;
