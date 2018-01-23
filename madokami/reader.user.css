@@ -1,0 +1,159 @@
+/* ==UserStyle==
+@name           Madomaki reader
+@namespace      github.com/ewasion/userstyles
+@version        0.1.0
+@description    Makes Madokami's reader just a tiny bit nicer
+@author         Eva <hax@riseup.net> (https://github.com/ewasion)
+@license        GPL-3.0
+@supportURL     https://github.com/ewasion/userstyles/issues/new?title=[madokami/reader]%20Short%20description%20of%20the%20issue&assignee=ewasion&body=%23%23%23%20Info%0D%0AInfo%20about%20the%20bug%0D%0A%0D%0A%23%23%23%20Repro%20Steps%0D%0A1.%20As%20many%20possible%0D%0A2.%20Steps%20on%20what%20to%20do%0D%0A3.%20To%20reproduce%20the%0D%0A4.%20Bug%0D%0A%0D%0A%23%23%23%20Expected%20occurrence%0D%0AWhat%20is%20expected%20to%20happen.%0D%0A%0D%0A%23%23%23%20Actual%20occurrence%0D%0AWhat%20really%20happens.%0D%0A%0D%0A%23%23%23%20Impact%20on%20user%0D%0AThe%20exact%20consequence%20of%20the%20bug.%0D%0A%0D%0A%23%23%23%20Repro%20success-rate%0D%0AHow%20much%20you%20can%20reproduce%20it.%0D%0A%0D%0A%23%23%23%20Browser%28s%29%20used%2Ftested%0D%0AAll%20browers%20you%20tested%20with%20%28And%20their%20operating%20system%29%0D%0ALike%20so%3B%20Firefox%203.0.15%20%28win%20XP%29
+@homepageURL    https://ewasion.github.io/userstyles/madokami/
+==/UserStyle== */
+
+@-moz-document regexp("https://manga.madokami.al/reader/.*") {
+#reader-page > img {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+    /*cursor: default;*/
+    z-index: 3;
+}
+
+#reader::after {
+    position: fixed;
+    bottom: 0;
+    left: 8ch;
+    right: 50%;
+    height: 3ex;
+    word-break: break-all;
+    content: attr(data-path);
+    font-family: monospace;
+    background: white;
+    color: #333;
+    z-index: 1;
+}
+
+#reader::before {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 3ex;
+    content: 'Reading\00a0';
+    font-family: monospace;
+    background: white;
+    color: #333;
+    z-index: 2;
+}
+
+@media all and (orientation: portrait) {
+  #reader::after {
+     right: 0;
+  }
+}
+}
+
+@-moz-document regexp("https://manga.madokami.al/reader/%252FAdmin%2520cleanup%252F.*") {
+#reader::after {
+    margin-left: -15ch;
+}
+}
+
+@-moz-document regexp("https://manga.madokami.al/reader/%252FArtbooks%252F.*") {
+#reader::after {
+    margin-left: -10ch;
+}
+}
+
+@-moz-document regexp("https://manga.madokami.al/reader/%252FManga%252F.%252F.{2}%252F.{4}%252F.*") {
+#reader::after {
+    margin-left: -17ch;
+}
+}
+
+@-moz-document regexp("https://manga.madokami.al/reader/%252FManga%252F_Autouploads%252FAutoUploaded%2520from%2520Assorted%2520Sources%252F.*") {
+#reader::after {
+    margin-left: -55ch;
+}
+}
+
+@-moz-document regexp("https://manga.madokami.al/reader/%252FManga%252F_Autouploads%252FComicWalker%252F.*"), regexp("https://manga.madokami.al/reader/%252FManga%252F_Autouploads%252FCrunchyroll%252F.*") {
+#reader::after {
+    margin-left: -32ch;
+}
+}
+
+@-moz-document regexp("https://manga.madokami.al/reader/%252FManga%252F_Autouploads%252FTest%252F.*"), regexp("https://manga.madokami.al/reader/%252FManga%252F_Autouploads%252FTemp%252F.*") {
+#reader::after {
+    margin-left: -25ch;
+}
+}
+
+@-moz-document regexp("https://manga.madokami.al/reader/%252FManga%252F_Doujinshi%252F.*") {
+#reader::after {
+    margin-left: -18ch;
+}
+}
+
+@-moz-document regexp("https://manga.madokami.al/reader/%252FManga%252F_Doujinshi%252F%2521Crossovers%252F.*") {
+#reader::after {
+    margin-left: -30ch;
+}
+}
+
+@-moz-document regexp("https://manga.madokami.al/reader/%252FManga%252F_Doujinshi%252F%2521Original%2520Doujinshi%252F.*") {
+#reader::after {
+    margin-left: -38ch;
+}
+}
+
+@-moz-document regexp("https://manga.madokami.al/reader/%252FManga%252FNon-English%252F.{7}%252F.*") {
+#reader::after {
+    margin-left: -27ch;
+}
+}
+
+@-moz-document regexp("https://manga.madokami.al/reader/%252FManga%252FNon-English%252F.{7}%252F.%252F.{2}%252F.{4}.*") {
+#reader::after {
+    margin-left: -37ch;
+}
+}
+
+@-moz-document regexp("https://manga.madokami.al/reader/%252FManga%252FNon-English%252FFran%25C3%25A7ais%252F.*") {
+#reader::after {
+    margin-left: -28ch;
+}
+}
+
+@-moz-document regexp("https://manga.madokami.al/reader/%252FManga%252FNon-English%252FBrazilian%2520Portuguese%252F.*") {
+#reader::after {
+    margin-left: -40ch;
+}
+}
+
+@-moz-document regexp("https://manga.madokami.al/reader/%252FManga%252FNon-English%252FBahasa%2520Indonesia%252F.*") {
+#reader::after {
+    margin-left: -36ch;
+}
+}
+
+@-moz-document regexp("https://manga.madokami.al/reader/%252FManga%252FOneshots%252F.*") {
+#reader::after {
+    margin-left: -16ch;
+}
+}
+
+@-moz-document regexp("https://manga.madokami.al/reader/%252FManga%252FOneshots%252F%2521Trap%2520Oneshots%252F.*") {
+#reader::after {
+    margin-left: -31ch;
+}
+}
+
+@-moz-document regexp("https://manga.madokami.al/reader/%252FRaws%252F.*") {
+#reader::after {
+    margin-left: -6ch;
+}
+}
