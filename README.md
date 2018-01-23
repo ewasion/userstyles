@@ -8,6 +8,7 @@ Read [INSTALL.md](https://github.com/ewasion/userstyles/blob/master/INSTALL.md)
 
 [4chan](https://ewasion.github.io/userstyles/4chan/)  
 [AnimeBytes](https://ewasion.github.io/userstyles/animebytes/)  
+[AVBODY](https://ewasion.github.io/userstyles/avbody/)  
 [Batoto](https://ewasion.github.io/userstyles/batoto/)  
 [Discord](https://ewasion.github.io/userstyles/discord/)  
 [DoujinAntena](https://ewasion.github.io/userstyles/doujinantena/)  

@@ -1,0 +1,134 @@
+/* ==UserStyle==
+@name           AVBODY reader
+@namespace      github.com/ewasion/userstyles
+@version        0.1.0
+@description    Removes clutter from AVBODY's reader
+@author         Eva <hax@riseup.net> (https://github.com/ewasion)
+@license        GPL-3.0
+@supportURL     https://github.com/ewasion/userstyles/issues/new?title=[avbody/reader]%20Short%20description%20of%20the%20issue&assignee=ewasion&body=%23%23%23%20Info%0D%0AInfo%20about%20the%20bug%0D%0A%0D%0A%23%23%23%20Repro%20Steps%0D%0A1.%20As%20many%20possible%0D%0A2.%20Steps%20on%20what%20to%20do%0D%0A3.%20To%20reproduce%20the%0D%0A4.%20Bug%0D%0A%0D%0A%23%23%23%20Expected%20occurrence%0D%0AWhat%20is%20expected%20to%20happen.%0D%0A%0D%0A%23%23%23%20Actual%20occurrence%0D%0AWhat%20really%20happens.%0D%0A%0D%0A%23%23%23%20Impact%20on%20user%0D%0AThe%20exact%20consequence%20of%20the%20bug.%0D%0A%0D%0A%23%23%23%20Repro%20success-rate%0D%0AHow%20much%20you%20can%20reproduce%20it.%0D%0A%0D%0A%23%23%23%20Browser%28s%29%20used%2Ftested%0D%0AAll%20browers%20you%20tested%20with%20%28And%20their%20operating%20system%29%0D%0ALike%20so%3B%20Firefox%203.0.15%20%28win%20XP%29
+@homepageURL    https://ewasion.github.io/userstyles/avbody/
+==/UserStyle== */
+
+@-moz-document regexp("https?://avbody.info/\\d+.*") {
+body {
+    overflow: hidden;
+}
+
+.modal-backdrop, .rating-container.rating-disabled {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .rating-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #article_search a {
+        display: none;
+    }
+}
+
+.navbar-fixed-bottom, .navbar-fixed-top, marquee {
+    z-index: 1 !important;
+}
+
+.article-content + div { /* Background */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    background: #34353B;
+}
+
+.article-content + div > .img-responsive {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 4;
+}
+
+.page_bar span:first-child > a, .page_bar span:last-child > a {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    cursor: default;
+}
+
+.page_bar span:first-child > a {
+    right: 50%;
+    z-index: 7 !important;
+}
+
+.page_bar span:last-child > a {
+    right: 0;
+    z-index: 6 !important;
+}
+
+.meta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 8;
+    height: 46px;
+    background: white;
+    transition: opacity 200ms;
+}
+
+.meta button:first-child {
+    margin-right: 180px;
+}
+
+.rating-container {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    z-index: 9;
+    opacity: 0;
+    transition: opacity 200ms;
+}
+
+.page_bar select {
+    position: fixed !important;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 9 !important;
+    width: auto !important;
+    margin: auto;
+    opacity: 0;
+    transition: opacity 200ms;
+}
+
+.meta:hover {
+    opacity: .9;
+}
+
+div.row:first-child + div:hover ~ .page_bar select, .page_bar select:hover, .meta:hover ~ div .rating-container, .rating-container:hover, .meta:hover ~ div #article_search a, #article_search a:hover {
+    opacity: 1;
+}
+
+#article_search a {
+    position: fixed;
+    bottom: 6px;
+    right: 10px;
+    z-index: 9;
+    opacity: 0;
+    transition: opacity 200ms;
+}
+}
