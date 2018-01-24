@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           KissManga reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.0
+@version        0.1.1
 @description    Removes clutter from KissManga's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -56,10 +56,10 @@ body {
 
 #btnNext {
     height: 100%;
-    left: 0;
+    right: 0;
     position: fixed;
     top: 0;
-    width: 100%;
+    width: calc(50% - 20px);
     z-index: 1006;
     opacity: 0;
     cursor: default !important;
@@ -70,7 +70,7 @@ body {
     left: 0;
     position: fixed;
     top: 0;
-    width: 50%;
+    width: calc(50% - 20px);
     z-index: 1008;
     opacity: 0;
     cursor: default !important;
