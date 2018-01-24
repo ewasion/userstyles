@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           MangaDex reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.8
+@version        0.1.9
 @description    Removes clutter from MangaDex's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -24,7 +24,7 @@
     opacity: .9;
 }
 
-[data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li > a:after, [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li > a:after, [data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after, [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after, [data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected:last-child:after {
+[data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li > a:after, [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li > a:after, [data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after, [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after, .footer:before {
     content: '';
     height: 100%;
     position: fixed;
@@ -81,14 +81,15 @@
     z-index: 11;
 }
 
-[data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected:last-child:after {
+.footer:before {
     content: 'END';
     width: 50%;
     right: 0;
     left: auto;
+    z-index: 7;
 }
 
-[data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected:last-child:hover:after {
+.footer:hover:before {
     opacity: 1;
 }
 
@@ -111,7 +112,7 @@
     max-height: 100%;
     height: auto;
     width: auto;
-    z-index: 7;
+    z-index: 8;
     border: none;
 }
 
