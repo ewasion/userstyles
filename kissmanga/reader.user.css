@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           KissManga reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.1
+@version        0.1.2
 @description    Removes clutter from KissManga's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -10,6 +10,12 @@
 ==/UserStyle== */
 
 @-moz-document regexp("http://kissmanga.com/Manga/.*/.*?id=.*") {
+/* Uncomment this to disable mouse controls
+#btnNext, #btnPrevious {
+    display: none;
+}
+*/
+
 body {
     overflow: hidden;
 }
@@ -18,62 +24,71 @@ body {
     position: fixed;
     left: calc(50% - 55px);
     top: 0;
-    z-index: 1001;
+    z-index: 1005;
 }
 
-#divImage p img {
+#divImage p img { /* Images in 'All pages' mode */
     display: none;
 }
 
-#divImage p:first-child, script + div ~ #divImage, #divImage:empty + #divMsg {
-    background: #161616 !important;
+#aCurr { /* Background */
+    background: #161616;
     bottom: 0;
     left: 0;
     position: fixed;
-    display: flex;
+    right: 0;
+    top: 0;
+    z-index: 1002;
+    cursor: default;
+}
+
+#imgCurrent { /* Image */
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 1003;
+}
+
+#btnNext, #btnPrevious {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    width: calc(50% - 40px);
+    opacity: 0;
+    cursor: default !important;
+    z-index: 1006;
+}
+
+#btnNext {
+    right: 0;
+}
+
+#btnPrevious {
+    left: 0;
+}
+
+#divImage p:first-child, #divImage:empty + #divMsg { /* 'All pages' notice, No more chapters */
+    background: #161616;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     right: 0;
     top: 0;
-    margin: 0;
-    z-index: 1000;
+    margin: auto !important;
+    z-index: 1004;
 }
 
 #divImage p:first-child::before {
-    background: #161616 !important;
     content: 'This userstyle doesn\'t work with the \'All pages\' reading type.\APlease select \'One page\' using the dropdown above.';
     white-space: pre;
-}
-
-#imgCurrent {
-    margin-top: 0;
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
-    width: auto;
-    z-index: 1003;
-}
-
-#btnNext {
-    height: 100%;
-    right: 0;
-    position: fixed;
-    top: 0;
-    width: calc(50% - 20px);
-    z-index: 1006;
-    opacity: 0;
-    cursor: default !important;
-}
-
-#btnPrevious {
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: calc(50% - 20px);
-    z-index: 1008;
-    opacity: 0;
-    cursor: default !important;
 }
 
 script + div #selectReadType, script + div .lbl:first-child {
