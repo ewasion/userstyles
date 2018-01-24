@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           MangaDex reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.7
+@version        0.1.8
 @description    Removes clutter from MangaDex's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -54,7 +54,7 @@
 
 [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after {
     content: 'NEXT CHAPTER';
-    width: 50%;
+    width: calc(50% - 40px);
     z-index: 9;
     left: auto;
     right: 0;
@@ -62,7 +62,7 @@
 
 [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li > a:after {
     content: 'PREVIOUS CHAPTER';
-    width: 50%;
+    width: calc(50% - 40px);
     z-index: 11;
 }
 
@@ -234,7 +234,7 @@ img::after {
     background: linear-gradient(to bottom, #fff 0%, #f8f8f8 100%);
 }
 
-#content > div > div:first-child:hover + div [data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li {
+#content > div > div:first-child:hover + div [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li {
     display: none;
 }
 
