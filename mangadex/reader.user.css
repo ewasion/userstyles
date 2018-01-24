@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           MangaDex reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.6
+@version        0.1.7
 @description    Removes clutter from MangaDex's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -24,7 +24,7 @@
     opacity: .9;
 }
 
-[data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li > a:after, [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li > a:after, [data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after, [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after {
+[data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li > a:after, [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li > a:after, [data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after, [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after, [data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected:last-child:after {
     content: '';
     height: 100%;
     position: fixed;
@@ -46,27 +46,31 @@
 }
 
 [data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after {
-    width: 100%;
+    width: 50%;
     z-index: 10;
+    left: auto;
+    right: 0;
 }
 
 [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after {
-    width: 100%;
+    content: 'NEXT CHAPTER';
+    width: 50%;
     z-index: 9;
+    left: auto;
+    right: 0;
 }
 
 [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li > a:after {
+    content: 'PREVIOUS CHAPTER';
     width: 50%;
     z-index: 11;
 }
 
 [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li > a:hover:after {
-    content: 'PREVIOUS CHAPTER';
     opacity: 1;
 }
 
 [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:hover:after {
-    content: 'NEXT CHAPTER';
     opacity: 1;
 }
 
@@ -77,12 +81,23 @@
     z-index: 11;
 }
 
+[data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected:last-child:after {
+    content: 'END';
+    width: 50%;
+    right: 0;
+    left: auto;
+}
+
+[data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected:last-child:hover:after {
+    opacity: 1;
+}
+
 [data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected > a:after, [data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected ~ li > a:after, [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li.selected ~ li > a:after, [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li.selected > a:after, [data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected[data-original-index="0"] > a:after {
     display: none;
 }
 
-[data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after, [data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after {
-    display: block;
+[data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after, [data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after, [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after, [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after {
+    display: flex !important;
 }
 
 #current_page, img::after {
@@ -167,7 +182,11 @@ img::after {
     z-index: 25;
 }
 
-[data-id="jump_page"] + .dropdown-menu, [data-id="jump_chapter"] + .dropdown-menu, [data-id="jump_group"] + .dropdown-menu {
+[data-id="jump_page"] + .dropdown-menu {
+    z-index: 0;
+}
+
+[data-id="jump_chapter"] + .dropdown-menu, [data-id="jump_group"] + .dropdown-menu {
     z-index: 20;
 }
 
@@ -215,6 +234,10 @@ img::after {
     background: linear-gradient(to bottom, #fff 0%, #f8f8f8 100%);
 }
 
+#content > div > div:first-child:hover + div [data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li {
+    display: none;
+}
+
 #content > div .dropdown-menu {
     top: auto;
     bottom: 100%;
@@ -222,6 +245,10 @@ img::after {
 }
 
 #content > div > div > a {
+    display: none;
+}
+
+[data-id="jump_page"] + .dropdown-menu li.selected:first-child {
     display: none;
 }
 }
