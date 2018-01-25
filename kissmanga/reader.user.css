@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           KissManga reader
 @namespace      github.com/ewasion/userstyles
-@version        0.1.2
+@version        0.1.3
 @description    Removes clutter from KissManga's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -154,7 +154,8 @@ script + div > div:first-child:hover, #headnav:hover {
 }
 
 #navsubbar {
-    background: none;
+    background: none !important;
+    margin-bottom: 0 !important;
 }
 
 #navsubbar p {
