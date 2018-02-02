@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           MangaDex reader
 @namespace      github.com/ewasion/userstyles
-@version        0.2.3
+@version        0.3.0
 @description    Removes clutter from MangaDex's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -10,131 +10,59 @@
 ==/UserStyle== */
 
 @-moz-document regexp("https://mangadex.com/chapter/.*") {
-[data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu, [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu {
-    display: block;
+#maximise { /* Fullscreen toggle */
     position: fixed;
+    padding: 8px 12px;
+    bottom: 7px;
+    left: 15px;
+    z-index: 30;
+    opacity: 0;
+    transition: opacity .3s;
 }
 
-select.bs-select-hidden, select.selectpicker {
+#content > div:first-child:hover + img + div #maximise {
+    opacity: .9;
+}
+
+footer {
+    display: none;
+}
+
+.container, #content, #content > div:first-child {
+    background: inherit;
+}
+
+#top_nav[style="display: none;"] + div #content > div:first-child { /* Bottom bar */
+    position: fixed;
+    z-index: 11;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: auto !important;
+    opacity: 0;
+    transition: opacity .3s;
+    border-top: 1px solid rgba(17, 17, 17, .2);
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+#top_nav[style="display: none;"] + div #content > div:first-child:hover {
+    opacity: .9;
+}
+
+#top_nav[style="display: none;"] + div #content > div:first-child > div {
     display: block !important;
 }
 
-#content > div.edit {
-    display: none;
+#top_nav[style="display: none;"] + div #delete_button {
+    margin-right: 15px;
 }
 
-#content > div.text-center {
-    z-index: 30;
-}
-
-#edit_button, #delete_button {
-    position: fixed;
-    bottom: 10px;
-    opacity: 0;
-    z-index: 30;
-    transition: opacity 200ms;
-}
-
-#edit_button {
-    left: 10px;
-}
-
-#delete_button {
-    right: 10px;
-}
-
-#content > div.text-center:hover > button, #content > div:first-child:hover ~ div.text-center > button {
-    opacity: .9;
-}
-
-#top_nav {
-    opacity: 0;
-    transition: opacity 200ms;
-    margin-bottom: 0;
-}
-
-#top_nav:hover {
-    opacity: .9;
-}
-
-[data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li > a:after, [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li > a:after, [data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after, [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after, .footer:before {
-    content: '';
-    height: 100%;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #E3E0D1;
-    background: radial-gradient(ellipse at center, rgba(0, 0, 0, .6) 0%, rgba(0, 0, 0, 0) 60%);
-    transition: opacity 200ms;
-    top: 0;
-    left: 0;
-    cursor: default;
-    opacity: 0;
-}
-
-[data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li > a:after {
-    width: 50%;
-    z-index: 12;
-}
-
-[data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after {
-    width: calc(50% + 40px);
-    z-index: 10;
-    left: auto;
-    right: 0;
-}
-
-[data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after {
-    content: 'NEXT CHAPTER';
-    width: calc(50% - 40px);
-    z-index: 9;
-    left: auto;
-    right: 0;
-}
-
-[data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li > a:after {
-    content: 'PREVIOUS CHAPTER';
-    width: calc(50% - 40px);
-    z-index: 11;
-}
-
-[data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li > a:hover:after {
-    opacity: 1;
-}
-
-[data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:hover:after {
-    opacity: 1;
-}
-
-.dropdown-menu li.selected[data-original-index="0"] + li > a:after {
-    width: 50%;
-    right: 0;
-    left: auto;
-    z-index: 11;
-}
-
-.footer:before {
-    content: 'END';
-    width: 50%;
-    right: 0;
-    left: auto;
-    z-index: 7;
-}
-
-.footer:hover:before {
-    opacity: 1;
-}
-
-[data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected > a:after, [data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected ~ li > a:after, [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li.selected ~ li > a:after, [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li.selected > a:after, [data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected[data-original-index="0"] > a:after {
-    display: none;
-}
-
-[data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after, [data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after, [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after, [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li.selected + li > a:after {
-    display: flex !important;
-}
-
-#current_page, img::after {
+#top_nav[style="display: none;"] + div #current_page,
+#top_nav[style="display: none;"] + div img::after {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -149,144 +77,55 @@ select.bs-select-hidden, select.selectpicker {
     border: none;
 }
 
-.footer:after {
-    content: '';
+#prev_page_alt, #next_page_alt {
     position: fixed;
     top: 0;
     bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 6;
-    background-color: #34353B;
+    width: calc(50% - 40px);
+    z-index: 9;
+    opacity: 0;
+    cursor: default;
 }
 
-[data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li:first-child > a:before, [data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li:last-child > a:before {
-    font-weight: bold;
-    font-size: 40px;
-    font-style: normal;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
+#prev_page_alt {
+    left: 0;
+}
+
+#next_page_alt {
+    right: 0;
+}
+
+#prev_chapter_alt, #next_chapter_alt {
     position: fixed;
     top: 0;
-    transition: opacity 200ms;
+    bottom: 0;
     width: 40px;
-    text-decoration: none;
+    z-index: 10;
     opacity: 0;
-    color: #ddd;
-    background: #333;
-    z-index: 15;
-}
-
-[data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li:first-child > a:before {
-    content: '\000AB';
-    left: 0;
-}
-
-[data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li:last-child > a:before {
-    content: '\000BB';
-    right: 0;
-}
-
-[data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li:first-child > a:hover:before, [data-id="jump_page"]:not([aria-expanded="true"]) + .dropdown-menu li:last-child > a:hover:before {
-    opacity: .9;
-}
-
-img::after {
-    content: 'Image failed to load';
-    color: #E3E0D1;
+    padding: 5px 0px;
     display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-#content > div:first-child {
-    position: fixed;
-    display: flex;
     align-items: center;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: 10px !important;
-    z-index: 20;
+    border: none;
+    border-radius: 0;
+    background: #333;
+    transition: opacity .3s;
 }
 
-#content > div > div:not(:last-child):not(:nth-child(2)) {
-    z-index: 25;
-}
-
-[data-id="jump_page"] + .dropdown-menu {
-    z-index: 0;
-}
-
-[data-id="jump_chapter"] + .dropdown-menu, [data-id="jump_group"] + .dropdown-menu {
-    z-index: 20;
-}
-
-[data-id="jump_chapter"][aria-expanded="true"] + .dropdown-menu {
-    z-index: 25;
-}
-
-[data-id="jump_page"], [data-id="jump_chapter"], [data-id="jump_group"] {
-    z-index: 25 !important;
-}
-
-#content > div > div:first-child {
-    width: 25%;
-}
-
-#content > div > div:first-child > span {
-    display: none;
-}
-
-#content> div > div:not(:first-child):not(:last-child) {
-    opacity: 0;
-}
-
-#content > div > div:first-child:hover:after {
+#prev_chapter_alt:hover, #next_chapter_alt:hover {
     opacity: .9;
 }
 
-#content > div > div:first-child:hover ~ div, #content > div > div:hover, #content > div > div:last-child {
-    opacity: 1 !important;
+#prev_chapter_alt > span, #next_chapter_alt > span {
+    font-size: 2em;
+    width: 2em;
 }
 
-#content > div > div:last-child {
-    width: 0;
-}
-
-#content > div > div:last-child button {
-    display: none;
-}
-
-#content > div > div:first-child:after {
-    content: '';
-    position: fixed;
-    bottom: 0;
-    opacity: 0;
+#prev_chapter_alt {
     left: 0;
-    transition: opacity 200ms;
+}
+
+#next_chapter_alt {
     right: 0;
-    height: 58px;
-    background: linear-gradient(to bottom, #fff 0%, #f8f8f8 100%);
-}
-
-#content > div > div:first-child:hover + div [data-id="jump_chapter"]:not([aria-expanded="true"]) + .dropdown-menu li {
-    display: none;
-}
-
-#content > div .dropdown-menu {
-    top: auto;
-    bottom: 100%;
-    margin-bottom: -1px;
-}
-
-#content > div > div > a {
-    display: none;
-}
-
-[data-id="jump_page"] + .dropdown-menu li.selected:first-child {
-    display: none;
 }
 }
