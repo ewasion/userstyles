@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           MangaDex reader
 @namespace      github.com/ewasion/userstyles
-@version        0.3.2
+@version        0.3.3
 @description    Removes clutter from MangaDex's reader
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -58,7 +58,6 @@ footer {
     padding-bottom: 5px;
     margin-bottom: auto !important;
     opacity: 0;
-    transition: opacity .3s;
     border-top: 1px solid rgba(17, 17, 17, .2);
     display: flex;
     align-items: center;
@@ -67,6 +66,7 @@ footer {
 
 #top_nav[style="display: none;"] + div #content > div:first-child:hover {
     opacity: .9;
+    transition: opacity .3s;
 }
 
 #top_nav[style="display: none;"] + div #content > div:first-child > div {
