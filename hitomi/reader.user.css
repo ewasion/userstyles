@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Clean Hitomi
 @namespace      github.com/ewasion/userstyles
-@version        0.1.2
+@version        0.1.3
 @description    A dark theme for Hitomi, gets rid of clutter on the homepage, optimized for large screens
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -125,7 +125,7 @@ ul.posts li {
     color: #D8BFD8;
 }
 
-.gallery-content h1 > a:hover {
+.gallery-content h1 > a:hover, .gallery-content > div > a:hover + h1 > a {
     color: #FFFBDB;
 }
 
