@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Clean Hitomi
 @namespace      github.com/ewasion/userstyles
-@version        0.1.3
+@version        0.1.4
 @description    A dark theme for Hitomi, gets rid of clutter on the homepage, optimized for large screens
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -10,7 +10,7 @@
 ==/UserStyle== */
 
 @-moz-document domain("hitomi.la") {
-.hitomi-birestra, .hitomi-vertical { /* Ads */
+.hitomi-birestra, .hitomi-vertical, .container ~ div { /* Ads */
     display: none;
 }
 
