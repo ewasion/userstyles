@@ -5,6 +5,12 @@
 
 [![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://ewasion.github.io/userstyles/discord/hide-timestamps.user.css)
 
+### Discord language code blocks
+> Displays programming languages above code blocks.
+
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-00adad.svg)](https://ewasion.github.io/userstyles/discord/language-blocks.user.css)
+[![Preview language-blocks.user.css](https://img.shields.io/badge/Preview-language--blocks.user.css-00adad.svg)](https://ewasion.github.io/userstyles/discord/language-blocks.preview.png)
+
 ### Discord image filenames
 > Displays filenames under pictures.
 
