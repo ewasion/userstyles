@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Clean Hitomi
 @namespace      github.com/ewasion/userstyles
-@version        0.1.6
+@version        0.1.7
 @description    A dark theme for Hitomi, gets rid of clutter on the homepage, optimized for large screens
 @author         Eva <hax@riseup.net> (https://github.com/ewasion)
 @license        GPL-3.0
@@ -10,7 +10,7 @@
 ==/UserStyle== */
 
 @-moz-document domain("hitomi.la") {
-.hitomi-birestra, .hitomi-vertical, .container ~ div { /* Ads */
+.container ~ div, [class^=hitomi-] { /* Ads */
     display: none;
 }
 
@@ -29,8 +29,15 @@
     border: none;
 }
 
-body, .container, .content, .navbar-inverse .navbar-inner, .top-content, .gallery-content, .page-container {
+body, .container, .content, .navbar-inverse .navbar-inner, .top-content, .gallery-content, .page-container, #loader-content {
     background: #22202B;
+}
+
+#loader-img {
+    filter: drop-shadow(2px 2px 0 #333) 
+            drop-shadow(-2px 2px 0 #333)
+            drop-shadow(2px -2px 0 #333)
+            drop-shadow(-2px -2px 0 #333);
 }
 
 .thumbnail-list, .page-content {
@@ -185,7 +192,7 @@ p.date, .dj-desc tr:not(:nth-child(3)), .dj-desc td:first-child {
 
 #nozomi-link {
     background-color: #30425f;
-    background-image: url('/h3bg.jpg');
+    background-image: url('https://hitomi.la/h3bg.jpg');
     border: none;
     margin: 10px 0 10px 10px;
     width: calc(100% - 20px);
